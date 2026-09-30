@@ -134,27 +134,9 @@
   background: #071724;
   border-top: 1px solid rgba(218, 240, 237, .13);
 }
-.polar-heading .section-meta { color: #90c9c6; }
+.polar-heading { min-height: 420px; }
+.polar-heading-spacer { height: 13px; }
 .polar-heading h2 { margin-top: 27px; font-size: clamp(46px, 4.6vw, 78px); }
-.polar-heading p {
-  max-width: 440px;
-  margin: 28px 0 0;
-  color: #adc4c7;
-  font-size: 16px;
-  line-height: 1.9;
-}
-.polar-rule {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 13px 24px;
-  max-width: 440px;
-  margin-top: 48px;
-  padding-top: 16px;
-  border-top: 1px solid rgba(218, 240, 237, .25);
-  color: #8fb3b8;
-  font-size: 10px;
-  letter-spacing: .2em;
-}
 .polar-map { margin: 0; text-align: center; }
 .polar-map img {
   display: block;
@@ -163,12 +145,9 @@
   margin: auto;
   filter: drop-shadow(0 24px 65px rgba(0, 5, 12, .38));
 }
-.polar-map figcaption { margin-top: 4px; color: #77989e; font-size: 11px; letter-spacing: .04em; }
-.polar-map figcaption a { color: #a6cbcb; text-decoration: underline; text-underline-offset: 3px; }
-
 @media (max-width: 900px) {
   .polar-section { grid-template-columns: 1fr; gap: 24px; }
-  .polar-heading { max-width: 680px; }
+  .polar-heading { max-width: 680px; min-height: 0; }
   .polar-map img { width: min(100%, 650px); }
 }
 @media (max-width: 620px) {
@@ -188,9 +167,6 @@
   .story-stage .hero-foot .scroll-arrow { display: inline-block; }
   .polar-section { padding-top: 80px; padding-bottom: 78px; }
   .polar-heading h2 { font-size: clamp(42px, 10vw, 56px); }
-  .polar-heading p { font-size: 15px; }
-  .polar-rule { margin-top: 30px; }
-  .polar-map figcaption { font-size: 9px; line-height: 1.5; }
 }
 @media (prefers-reduced-motion: reduce) {
   .story-track { height: auto; }
