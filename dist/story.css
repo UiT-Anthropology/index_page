@@ -1,4 +1,16 @@
 /* The scene stays in place while the two chapters move through it. */
+@font-face {
+  font-family: "Manrope";
+  src: url("./assets/fonts/Manrope-Variable.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+}
+.glass-nav a {
+  font-family: "Manrope", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: .035em;
+}
 .site-shell { overflow: clip; }
 .brand-strip {
   height: 78px;
@@ -293,6 +305,7 @@
   .team-viewport { left: 34vw; }
 }
 @media (max-width: 620px) {
+  .glass-nav a { letter-spacing: .015em; }
   .brand-strip { height: 68px; }
   .brand-placeholder { gap: 10px; font-size: 9px; }
   .brand-placeholder-mark { width: 29px; height: 29px; font-size: 18px; }
