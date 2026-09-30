@@ -145,6 +145,52 @@
   margin: auto;
   filter: drop-shadow(0 24px 65px rgba(0, 5, 12, .38));
 }
+.team-scroll {
+  position: relative;
+  height: 230svh;
+  background: #e8eeeb;
+  color: #102d36;
+}
+.team-stage {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 46%, #f5f7f2 0, #e8eeeb 68%, #dae7e3 100%);
+}
+.team-row {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: clamp(30px, 4vw, 72px);
+  width: max-content;
+  transform: translate3d(0, -50%, 0);
+  will-change: transform;
+}
+.team-card { flex: 0 0 clamp(270px, 29vw, 380px); width: clamp(270px, 29vw, 380px); }
+.team-photo {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: .84;
+  border: 1px solid #afc4c1;
+  background: linear-gradient(145deg, #d7e3df, #b5ccc8 72%, #91b1ad);
+}
+.team-card:nth-child(2) .team-photo { background: linear-gradient(145deg, #d9e4e1, #b4cac9 72%, #8ba9aa); }
+.team-card:nth-child(3) .team-photo { background: linear-gradient(145deg, #e1e8e3, #bbceca 72%, #9eb6af); }
+.team-card:nth-child(4) .team-photo { background: linear-gradient(145deg, #dae7e4, #aec8c5 72%, #86aaa5); }
+.portrait-head,
+.portrait-shoulders { position: absolute; display: block; left: 50%; background: rgba(77, 111, 111, .24); }
+.portrait-head { top: 23%; width: 25%; aspect-ratio: 1; border-radius: 50%; transform: translateX(-50%); }
+.portrait-shoulders { bottom: -16%; width: 72%; height: 50%; border-radius: 50% 50% 0 0; transform: translateX(-50%); }
+.team-card h2 {
+  margin: 19px 0 5px;
+  font: 500 clamp(24px, 2.3vw, 32px)/1.15 Georgia, "Times New Roman", serif;
+  white-space: nowrap;
+}
+.team-card p { margin: 0; color: #607f80; font-size: 13px; letter-spacing: .08em; }
+.closing-grid-two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 @media (max-width: 900px) {
   .polar-section { grid-template-columns: 1fr; gap: 24px; }
   .polar-heading { max-width: 680px; min-height: 0; }
@@ -167,6 +213,9 @@
   .story-stage .hero-foot .scroll-arrow { display: inline-block; }
   .polar-section { padding-top: 80px; padding-bottom: 78px; }
   .polar-heading h2 { font-size: clamp(42px, 10vw, 56px); }
+  .team-card { flex-basis: min(72vw, 340px); width: min(72vw, 340px); }
+  .team-card h2 { font-size: 25px; }
+  .closing-grid-two { grid-template-columns: 1fr; }
 }
 @media (prefers-reduced-motion: reduce) {
   .story-track { height: auto; }
@@ -176,4 +225,7 @@
   .story-details { margin-top: 100px; pointer-events: auto !important; }
   .story-stage .hero-foot { bottom: 22px; }
   .story-stage .hero-foot > span { animation: none; }
+  .team-scroll { height: auto !important; }
+  .team-stage { position: relative; height: auto; overflow: visible; padding: 80px clamp(24px, 5vw, 88px); }
+  .team-row { position: relative; top: auto; left: auto; width: auto; flex-direction: row; flex-wrap: wrap; justify-content: center; transform: none !important; }
 }
