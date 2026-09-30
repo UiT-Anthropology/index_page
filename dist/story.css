@@ -1,11 +1,5 @@
 /* The scene stays in place while the two chapters move through it. */
 .site-shell { overflow: clip; }
-.masthead {
-  position: absolute;
-  inset: 0 0 auto;
-  z-index: 5;
-  background: linear-gradient(180deg, rgba(3, 17, 29, .76), transparent);
-}
 .story-track { position: relative; height: 260svh; }
 .story-stage.hero {
   position: sticky;
@@ -21,7 +15,7 @@
   background: linear-gradient(90deg, rgba(2, 17, 28, .83), rgba(4, 20, 32, .43) 52%, rgba(4, 20, 32, .18)),
     linear-gradient(180deg, rgba(3, 17, 28, .18), transparent 34%, rgba(3, 17, 28, .64));
 }
-.story-stage .glass-nav { position: relative; z-index: 3; margin-top: 94px; }
+.story-stage .glass-nav { position: relative; z-index: 3; margin-top: 0; }
 .story-intro,
 .story-details {
   position: absolute;
@@ -34,6 +28,7 @@
 }
 .story-intro { opacity: 1; }
 .story-intro h1 { margin-top: 0; }
+.story-intro p strong { color: #fff; font-weight: 700; }
 .story-details { opacity: 0; pointer-events: none; }
 .story-details .eyebrow { font-size: 11px; }
 .story-kicker {
@@ -76,11 +71,28 @@
 .story-stage .hero-foot {
   position: absolute;
   right: clamp(24px, 5vw, 88px);
-  bottom: 30px;
+  bottom: 58px;
   left: clamp(24px, 5vw, 88px);
   justify-content: center;
+  padding: 0;
+  border: 0;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: .16em;
 }
 .story-stage .hero-foot > span { color: #fff; }
+.scroll-arrow {
+  display: inline-block;
+  margin-left: 12px;
+  font-size: 24px;
+  line-height: .6;
+  vertical-align: -3px;
+  animation: scroll-cue 1.7s ease-in-out infinite;
+}
+@keyframes scroll-cue {
+  0%, 100% { opacity: 1; transform: translateY(0); }
+  50% { opacity: .2; transform: translateY(5px); }
+}
 
 .polar-section {
   min-height: 100svh;
@@ -131,8 +143,7 @@
   .polar-map img { width: min(100%, 650px); }
 }
 @media (max-width: 620px) {
-  .masthead { height: 78px; }
-  .story-stage .glass-nav { margin-top: 78px; }
+  .story-stage .glass-nav { margin-top: 0; }
   .story-intro, .story-details { bottom: 107px; }
   .story-intro h1 { font-size: clamp(40px, 10vw, 56px); }
   .story-intro p { font-size: 15px; line-height: 1.65; }
@@ -156,4 +167,5 @@
   .story-intro { margin-top: clamp(110px, 20vh, 210px); }
   .story-details { margin-top: 100px; pointer-events: auto !important; }
   .story-stage .hero-foot { bottom: 22px; }
+  .scroll-arrow { animation: none; }
 }
