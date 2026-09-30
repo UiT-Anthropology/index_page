@@ -56,7 +56,23 @@
             <h2 id="polar-title">Click the pin<br /><em>to discover<br />with the team.</em></h2>
           </div>
           <figure class="polar-map">
-            <img src="./assets/arctic-polar-map.svg" alt="North-polar map centered on the Arctic Ocean, showing the surrounding northern landmasses" loading="lazy" />
+            <div class="polar-map-wrap">
+              <img src="./assets/arctic-polar-map.svg" alt="North-polar map centered on the Arctic Ocean, showing the surrounding northern landmasses" loading="lazy" />
+              <button class="animal-pin" type="button" data-pin="bear" style="--pin-x: 38%; --pin-y: 46%" aria-label="Explore the polar bear demonstration project" aria-controls="polar-bear-project" aria-expanded="false"><img src="./assets/polar-bear-pin.png" alt="" /></button>
+              <button class="animal-pin" type="button" data-pin="fox" style="--pin-x: 66%; --pin-y: 63%" aria-label="Explore the Arctic fox demonstration project" aria-controls="arctic-fox-project" aria-expanded="false"><img src="./assets/arctic-fox-pin.png" alt="" /></button>
+              <section class="pin-popup" id="polar-bear-project" role="dialog" aria-modal="false" aria-labelledby="polar-bear-title" hidden>
+                <button class="pin-popup-close" type="button" aria-label="Close polar bear project">×</button>
+                <span class="pin-popup-kicker">DEMONSTRATION PROJECT 01</span>
+                <h3 id="polar-bear-title">Polar bear &amp; sea ice</h3>
+                <p>This sample project explores how field observations could document polar bear movement and sea-ice habitat. A full project page could bring together methods, photographs, route maps, and research updates.</p>
+              </section>
+              <section class="pin-popup" id="arctic-fox-project" role="dialog" aria-modal="false" aria-labelledby="arctic-fox-title" hidden>
+                <button class="pin-popup-close" type="button" aria-label="Close Arctic fox project">×</button>
+                <span class="pin-popup-kicker">DEMONSTRATION PROJECT 02</span>
+                <h3 id="arctic-fox-title">Arctic fox &amp; tundra</h3>
+                <p>This sample project shows how seasonal field records could follow Arctic foxes across tundra habitats. Its future archive could combine observation notes, images, local context, and environmental data.</p>
+              </section>
+            </div>
           </figure>
         </section>
 
