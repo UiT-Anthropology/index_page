@@ -222,6 +222,19 @@
 }
 .team-card p { margin: 0; color: #607f80; font-size: 13px; letter-spacing: .08em; }
 .closing-grid-two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.home-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 25px;
+  padding-bottom: 32px;
+  border-top: 1px solid rgba(218,240,237,.2);
+  background: #0b2330;
+  color: #83a4aa;
+  font-size: 11px;
+  letter-spacing: .08em;
+}
+.home-footer a { color: #c0d8d8; }
 @media (max-width: 900px) {
   .polar-section { grid-template-columns: 1fr; gap: 24px; }
   .polar-heading { max-width: 680px; min-height: 0; }
@@ -254,6 +267,7 @@
   .team-intro a { margin-top: 14px; }
   .team-viewport { inset: 170px 0 0 0; }
   .closing-grid-two { grid-template-columns: 1fr; }
+  .home-footer { flex-direction: column; }
 }
 @media (prefers-reduced-motion: reduce) {
   .story-track { height: auto; }
