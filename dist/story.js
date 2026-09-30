@@ -2,7 +2,7 @@ const track = document.querySelector('.story-track');
 const intro = document.querySelector('.story-intro');
 const details = document.querySelector('.story-details');
 const teamSection = document.querySelector('.team-scroll');
-const teamStage = document.querySelector('.team-stage');
+const teamViewport = document.querySelector('.team-viewport');
 const teamRow = document.querySelector('.team-row');
 const teamCards = [...document.querySelectorAll('.team-card')];
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -25,11 +25,11 @@ function layoutTeam() {
     return;
   }
 
-  const first = teamCards[0];
   const last = teamCards[teamCards.length - 1];
-  const center = (teamStage.clientWidth - first.offsetWidth) / 2;
-  teamStart = center - first.offsetLeft;
-  teamDistance = first.offsetLeft - last.offsetLeft;
+  const gutter = teamViewport.clientWidth < 600 ? 24 : 32;
+  teamStart = gutter;
+  const end = teamViewport.clientWidth - last.offsetWidth - gutter - last.offsetLeft;
+  teamDistance = Math.max(0, teamStart - end);
   teamTravel = Math.max(1, teamDistance * 1.2);
   teamSection.style.height = `${window.innerHeight + teamTravel}px`;
 }
@@ -37,7 +37,7 @@ function layoutTeam() {
 function updateTeam() {
   if (reduceMotion.matches || teamCards.length < 2) return;
   const progress = clamp(-teamSection.getBoundingClientRect().top / teamTravel);
-  const offset = teamStart + teamDistance * progress;
+  const offset = teamStart - teamDistance * progress;
   teamRow.style.transform = `translate3d(${offset.toFixed(1)}px, -50%, 0)`;
 }
 
