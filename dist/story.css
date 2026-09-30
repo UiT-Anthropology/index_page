@@ -1,0 +1,159 @@
+/* The scene stays in place while the two chapters move through it. */
+.site-shell { overflow: clip; }
+.masthead {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 5;
+  background: linear-gradient(180deg, rgba(3, 17, 29, .76), transparent);
+}
+.story-track { position: relative; height: 260svh; }
+.story-stage.hero {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  min-height: 0;
+  display: block;
+  overflow: hidden;
+  padding: 0 clamp(24px, 5vw, 88px);
+}
+.story-stage .hero-image { background-position: center 53%; }
+.story-stage .hero-shade {
+  background: linear-gradient(90deg, rgba(2, 17, 28, .83), rgba(4, 20, 32, .43) 52%, rgba(4, 20, 32, .18)),
+    linear-gradient(180deg, rgba(3, 17, 28, .18), transparent 34%, rgba(3, 17, 28, .64));
+}
+.story-stage .glass-nav { position: relative; z-index: 3; margin-top: 94px; }
+.story-intro,
+.story-details {
+  position: absolute;
+  left: clamp(24px, 5vw, 88px);
+  bottom: clamp(112px, 17vh, 190px);
+  width: min(900px, calc(100% - 48px));
+  margin: 0;
+  padding: 0;
+  will-change: transform, opacity;
+}
+.story-intro { opacity: 1; }
+.story-intro h1 { margin-top: 0; }
+.story-details { opacity: 0; pointer-events: none; }
+.story-details .eyebrow { font-size: 11px; }
+.story-kicker {
+  margin: 30px 0 14px;
+  color: #c9e5e2;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .24em;
+}
+.story-details h2,
+.polar-heading h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  font-size: clamp(52px, 6.5vw, 104px);
+  line-height: 1.08;
+  letter-spacing: -.025em;
+}
+.story-details h2 em,
+.polar-heading h2 em { color: #b8dfdc; font-style: normal; }
+.story-description {
+  max-width: 660px;
+  margin: 26px 0 0;
+  color: #d7e9e9;
+  font-size: clamp(16px, 1.4vw, 20px);
+  line-height: 1.7;
+}
+.story-description strong { color: #fff; font-weight: 600; }
+.story-facts {
+  display: flex;
+  gap: clamp(24px, 4vw, 70px);
+  max-width: 730px;
+  margin-top: 34px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(222, 246, 244, .38);
+}
+.story-facts div { display: flex; flex-direction: column; gap: 5px; }
+.story-facts span { font: 500 31px Georgia, serif; color: #ecf6f2; }
+.story-facts small { color: #b1ccce; font-size: 10px; letter-spacing: .18em; }
+.story-stage .hero-foot {
+  position: absolute;
+  right: clamp(24px, 5vw, 88px);
+  bottom: 30px;
+  left: clamp(24px, 5vw, 88px);
+  justify-content: center;
+}
+.story-stage .hero-foot > span { color: #fff; }
+
+.polar-section {
+  min-height: 100svh;
+  display: grid;
+  grid-template-columns: minmax(290px, .72fr) minmax(420px, 1.28fr);
+  align-items: center;
+  gap: clamp(30px, 5vw, 92px);
+  padding-top: clamp(90px, 12vh, 150px);
+  padding-bottom: clamp(80px, 10vh, 130px);
+  background: #071724;
+  border-top: 1px solid rgba(218, 240, 237, .13);
+}
+.polar-heading .section-meta { color: #90c9c6; }
+.polar-heading h2 { margin-top: 27px; font-size: clamp(46px, 4.6vw, 78px); }
+.polar-heading p {
+  max-width: 440px;
+  margin: 28px 0 0;
+  color: #adc4c7;
+  font-size: 16px;
+  line-height: 1.9;
+}
+.polar-rule {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px 24px;
+  max-width: 440px;
+  margin-top: 48px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(218, 240, 237, .25);
+  color: #8fb3b8;
+  font-size: 10px;
+  letter-spacing: .2em;
+}
+.polar-map { margin: 0; text-align: center; }
+.polar-map img {
+  display: block;
+  width: min(100%, 790px);
+  height: auto;
+  margin: auto;
+  filter: drop-shadow(0 24px 65px rgba(0, 5, 12, .38));
+}
+.polar-map figcaption { margin-top: 4px; color: #77989e; font-size: 11px; letter-spacing: .04em; }
+.polar-map figcaption a { color: #a6cbcb; text-decoration: underline; text-underline-offset: 3px; }
+
+@media (max-width: 900px) {
+  .polar-section { grid-template-columns: 1fr; gap: 24px; }
+  .polar-heading { max-width: 680px; }
+  .polar-map img { width: min(100%, 650px); }
+}
+@media (max-width: 620px) {
+  .masthead { height: 78px; }
+  .story-stage .glass-nav { margin-top: 78px; }
+  .story-intro, .story-details { bottom: 107px; }
+  .story-intro h1 { font-size: clamp(40px, 10vw, 56px); }
+  .story-intro p { font-size: 15px; line-height: 1.65; }
+  .story-details .eyebrow { font-size: 9px; letter-spacing: .1em; }
+  .story-kicker { margin-top: 20px; font-size: 9px; letter-spacing: .1em; }
+  .story-details h2 { font-size: clamp(42px, 10vw, 62px); }
+  .story-description { margin-top: 18px; font-size: 14px; line-height: 1.55; }
+  .story-facts { gap: 18px; margin-top: 20px; padding-top: 14px; }
+  .story-facts span { font-size: 23px; }
+  .story-facts small { font-size: 8px; letter-spacing: .06em; }
+  .polar-section { padding-top: 80px; padding-bottom: 78px; }
+  .polar-heading h2 { font-size: clamp(42px, 10vw, 56px); }
+  .polar-heading p { font-size: 15px; }
+  .polar-rule { margin-top: 30px; }
+  .polar-map figcaption { font-size: 9px; line-height: 1.5; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .story-track { height: auto; }
+  .story-stage.hero { position: relative; height: auto; min-height: 100svh; padding-bottom: 80px; }
+  .story-intro, .story-details { position: relative; left: auto; bottom: auto; width: 100%; transform: none !important; opacity: 1 !important; }
+  .story-intro { margin-top: clamp(110px, 20vh, 210px); }
+  .story-details { margin-top: 100px; pointer-events: auto !important; }
+  .story-stage .hero-foot { bottom: 22px; }
+}
