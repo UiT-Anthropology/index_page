@@ -20,15 +20,20 @@
 .story-details {
   position: absolute;
   left: clamp(24px, 5vw, 88px);
-  bottom: clamp(112px, 17vh, 190px);
+  bottom: clamp(152px, 22vh, 230px);
   width: min(900px, calc(100% - 48px));
   margin: 0;
   padding: 0;
   will-change: transform, opacity;
 }
 .story-intro { opacity: 1; }
-.story-intro h1 { margin-top: 0; }
-.story-intro p strong { color: #fff; font-weight: 700; }
+.story-intro h1 {
+  margin: 0 0 19px;
+  line-height: 1.12;
+  letter-spacing: -.025em;
+}
+.story-intro p { max-width: 620px; line-height: 1.75; }
+.story-intro p strong { color: #fff; font-weight: 700; white-space: nowrap; }
 .story-details { opacity: 0; pointer-events: none; }
 .story-details .eyebrow { font-size: 11px; }
 .story-kicker {
@@ -56,7 +61,7 @@
   font-size: clamp(16px, 1.4vw, 20px);
   line-height: 1.7;
 }
-.story-description strong { color: #fff; font-weight: 600; }
+.story-description strong { color: #fff; font-weight: 600; white-space: nowrap; }
 .story-facts {
   display: flex;
   gap: clamp(24px, 4vw, 70px);
@@ -71,7 +76,7 @@
 .story-stage .hero-foot {
   position: absolute;
   right: clamp(24px, 5vw, 88px);
-  bottom: 58px;
+  bottom: 92px;
   left: clamp(24px, 5vw, 88px);
   justify-content: center;
   padding: 0;
@@ -80,18 +85,21 @@
   font-weight: 600;
   letter-spacing: .16em;
 }
-.story-stage .hero-foot > span { color: #fff; }
+.story-stage .hero-foot > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+  color: #fff;
+  animation: scroll-cue 3.2s ease-in-out infinite;
+}
 .scroll-arrow {
   display: inline-block;
-  margin-left: 12px;
   font-size: 24px;
-  line-height: .6;
-  vertical-align: -3px;
-  animation: scroll-cue 1.7s ease-in-out infinite;
+  line-height: 1;
 }
 @keyframes scroll-cue {
-  0%, 100% { opacity: 1; transform: translateY(0); }
-  50% { opacity: .2; transform: translateY(5px); }
+  0%, 100% { opacity: 1; }
+  50% { opacity: .32; }
 }
 
 .polar-section {
@@ -144,7 +152,7 @@
 }
 @media (max-width: 620px) {
   .story-stage .glass-nav { margin-top: 0; }
-  .story-intro, .story-details { bottom: 107px; }
+  .story-intro, .story-details { bottom: 142px; }
   .story-intro h1 { font-size: clamp(40px, 10vw, 56px); }
   .story-intro p { font-size: 15px; line-height: 1.65; }
   .story-details .eyebrow { font-size: 9px; letter-spacing: .1em; }
@@ -154,6 +162,8 @@
   .story-facts { gap: 18px; margin-top: 20px; padding-top: 14px; }
   .story-facts span { font-size: 23px; }
   .story-facts small { font-size: 8px; letter-spacing: .06em; }
+  .story-stage .hero-foot { bottom: 75px; }
+  .story-stage .hero-foot .scroll-arrow { display: inline-block; }
   .polar-section { padding-top: 80px; padding-bottom: 78px; }
   .polar-heading h2 { font-size: clamp(42px, 10vw, 56px); }
   .polar-heading p { font-size: 15px; }
@@ -167,5 +177,5 @@
   .story-intro { margin-top: clamp(110px, 20vh, 210px); }
   .story-details { margin-top: 100px; pointer-events: auto !important; }
   .story-stage .hero-foot { bottom: 22px; }
-  .scroll-arrow { animation: none; }
+  .story-stage .hero-foot > span { animation: none; }
 }
