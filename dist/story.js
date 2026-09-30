@@ -77,52 +77,55 @@ document.fonts.ready.then(() => { layoutTeam(); requestUpdate(); });
 layoutTeam();
 requestUpdate();
 
-const mapWrap = document.querySelector('.polar-map-wrap');
 const mapPins = [...document.querySelectorAll('.animal-pin')];
 let openPin = null;
+let pinSequence = 0;
+const waitForPinMotion = (ms) => new Promise((resolve) => setTimeout(resolve, reduceMotion.matches ? 0 : ms));
 
-function placePinPopup(pin, popup) {
-  const mapRect = mapWrap.getBoundingClientRect();
-  const pinRect = pin.getBoundingClientRect();
-  const x = pinRect.left + pinRect.width / 2 - mapRect.left;
-  const y = pinRect.top + pinRect.height / 2 - mapRect.top;
-  const gap = 24;
-  const width = popup.offsetWidth;
-  const height = popup.offsetHeight;
-  const left = Math.max(8, Math.min(x - width / 2, mapRect.width - width - 8));
-  const top = pinRect.top - height - gap >= 12 ? y - height - gap : y + gap;
-
-  popup.style.left = `${left}px`;
-  popup.style.top = `${top}px`;
-  popup.style.setProperty('--origin-x', `${x - left}px`);
-  popup.style.setProperty('--origin-y', `${y - top}px`);
+function resetPin(pin) {
+  const popup = document.getElementById(pin.getAttribute('aria-controls'));
+  popup.hidden = true;
+  popup.classList.remove('is-open', 'is-closing');
+  pin.classList.remove('is-featured');
+  pin.setAttribute('aria-expanded', 'false');
 }
 
-function closePinPopup(restoreFocus = false) {
+async function closePinPopup(restoreFocus = false) {
   if (!openPin) return;
   const pin = openPin;
   const popup = document.getElementById(pin.getAttribute('aria-controls'));
+  const sequence = ++pinSequence;
+  if (!popup.hidden) {
+    popup.classList.remove('is-open');
+    popup.classList.add('is-closing');
+    await waitForPinMotion(240);
+    if (sequence !== pinSequence) return;
+  }
   popup.hidden = true;
-  popup.classList.remove('is-open');
+  popup.classList.remove('is-closing');
+  pin.classList.remove('is-featured');
   pin.setAttribute('aria-expanded', 'false');
   openPin = null;
   if (restoreFocus) pin.focus();
 }
 
+async function openPinPopup(pin) {
+  if (openPin === pin) { closePinPopup(true); return; }
+  const sequence = ++pinSequence;
+  mapPins.forEach(resetPin);
+  openPin = pin;
+  pin.classList.add('is-featured');
+  await waitForPinMotion(620);
+  if (sequence !== pinSequence || openPin !== pin) return;
+  const popup = document.getElementById(pin.getAttribute('aria-controls'));
+  popup.hidden = false;
+  popup.classList.add('is-open');
+  pin.setAttribute('aria-expanded', 'true');
+  popup.querySelector('.pin-popup-close').focus();
+}
+
 for (const pin of mapPins) {
-  pin.addEventListener('click', () => {
-    if (openPin === pin) { closePinPopup(true); return; }
-    closePinPopup();
-    const popup = document.getElementById(pin.getAttribute('aria-controls'));
-    popup.hidden = false;
-    placePinPopup(pin, popup);
-    popup.classList.remove('is-open');
-    void popup.offsetWidth;
-    popup.classList.add('is-open');
-    pin.setAttribute('aria-expanded', 'true');
-    openPin = pin;
-    popup.querySelector('.pin-popup-close').focus();
-  });
+  pin.addEventListener('click', () => openPinPopup(pin));
 }
 
 document.querySelectorAll('.pin-popup-close').forEach((button) => {
@@ -133,7 +136,4 @@ document.addEventListener('keydown', (event) => {
 });
 document.addEventListener('pointerdown', (event) => {
   if (openPin && !event.target.closest('.animal-pin, .pin-popup')) closePinPopup();
-});
-window.addEventListener('resize', () => {
-  if (openPin) placePinPopup(openPin, document.getElementById(openPin.getAttribute('aria-controls')));
 });

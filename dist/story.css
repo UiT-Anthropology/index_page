@@ -148,7 +148,7 @@
 }
 .animal-pin {
   position: absolute;
-  z-index: 2;
+  z-index: 4;
   top: var(--pin-y);
   left: var(--pin-x);
   display: block;
@@ -161,16 +161,19 @@
   box-shadow: 0 0 0 4px rgba(226, 247, 235, .72), 0 10px 25px rgba(0, 20, 22, .42);
   transform: translate(-50%, -50%);
   cursor: pointer;
-  transition: transform .22s ease, box-shadow .22s ease;
+  transition: top .62s cubic-bezier(.22, 1, .36, 1), left .62s cubic-bezier(.22, 1, .36, 1), width .62s cubic-bezier(.22, 1, .36, 1), transform .22s ease, box-shadow .35s ease;
 }
-.animal-pin:hover, .animal-pin[aria-expanded="true"] { transform: translate(-50%, -50%) scale(1.13); box-shadow: 0 0 0 6px rgba(226, 247, 235, .83), 0 12px 28px rgba(0, 20, 22, .5); }
+.animal-pin:hover:not(.is-featured) { transform: translate(-50%, -50%) scale(1.13); box-shadow: 0 0 0 6px rgba(226, 247, 235, .83), 0 12px 28px rgba(0, 20, 22, .5); }
+.animal-pin.is-featured { z-index: 8; top: 38.2%; left: 50%; width: clamp(82px, 7.5vw, 96px); box-shadow: 0 0 0 7px rgba(226, 247, 235, .92), 0 18px 38px rgba(0, 20, 22, .55); }
 .animal-pin:focus-visible { outline: 3px solid #fff; outline-offset: 7px; }
 .animal-pin img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
 .pin-popup {
   position: absolute;
-  z-index: 5;
-  width: min(350px, calc(100vw - 44px));
-  padding: 25px 27px 27px;
+  z-index: 6;
+  top: calc(38.2% + 35px);
+  left: 50%;
+  width: min(390px, calc(100vw - 44px));
+  padding: 66px 30px 30px;
   border: 1px solid #9dbba9;
   border-top: 4px solid #164d39;
   border-radius: 13px;
@@ -178,16 +181,19 @@
   box-shadow: 0 25px 70px rgba(0, 14, 19, .48);
   color: #15313a;
   text-align: left;
-  transform-origin: var(--origin-x, 50%) var(--origin-y, 100%);
+  transform: translateX(-50%);
+  transform-origin: 50% 0;
 }
 .pin-popup[hidden] { display: none; }
-.pin-popup.is-open { animation: pin-popup-in .38s cubic-bezier(.2, .85, .18, 1.1) both; }
+.pin-popup.is-open { animation: pin-popup-in .42s cubic-bezier(.2, .85, .18, 1.05) both; }
+.pin-popup.is-closing { animation: pin-popup-out .24s ease-in both; }
 .pin-popup-close { position: absolute; top: 12px; right: 14px; width: 28px; height: 28px; border: 0; background: transparent; color: #315b51; font-size: 25px; line-height: 1; cursor: pointer; }
 .pin-popup-close:hover { color: #102b2c; }
 .pin-popup-kicker { color: #356c57; font-size: 10px; font-weight: 700; letter-spacing: .16em; }
 .pin-popup h3 { margin: 14px 0 13px; font: 500 31px/1.1 Georgia, "Times New Roman", serif; letter-spacing: -.02em; }
 .pin-popup p { margin: 0; color: #456268; font-size: 14px; line-height: 1.7; }
-@keyframes pin-popup-in { from { opacity: 0; transform: scale(.2); } to { opacity: 1; transform: scale(1); } }
+@keyframes pin-popup-in { from { opacity: 0; transform: translateX(-50%) scale(.16); } to { opacity: 1; transform: translateX(-50%) scale(1); } }
+@keyframes pin-popup-out { from { opacity: 1; transform: translateX(-50%) scale(1); } to { opacity: 0; transform: translateX(-50%) scale(.16); } }
 .team-scroll {
   position: relative;
   height: 230svh;
@@ -303,7 +309,7 @@
   .story-stage .hero-foot .scroll-arrow { display: inline-block; }
   .polar-section { padding-top: 80px; padding-bottom: 78px; }
   .polar-heading h2 { font-size: clamp(42px, 10vw, 56px); }
-  .pin-popup { padding: 23px 23px 24px; }
+  .pin-popup { top: calc(38.2% + 32px); padding: 60px 23px 24px; }
   .pin-popup h3 { font-size: 27px; }
   .team-card { flex-basis: min(72vw, 340px); width: min(72vw, 340px); }
   .team-card h2 { font-size: 25px; }
@@ -328,5 +334,5 @@
   .team-viewport { position: relative; inset: auto; overflow: visible; }
   .team-row { position: relative; top: auto; left: auto; width: auto; flex-direction: row; flex-wrap: wrap; justify-content: center; transform: none !important; }
   .animal-pin { transition: none; }
-  .pin-popup.is-open { animation: none; }
+  .pin-popup.is-open, .pin-popup.is-closing { animation: none; }
 }
