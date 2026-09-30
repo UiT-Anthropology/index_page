@@ -61,8 +61,11 @@
 }
 .story-intro p { max-width: 620px; line-height: 1.75; }
 .story-intro p strong { color: #fff; font-weight: 700; white-space: nowrap; }
-.story-details { opacity: 0; pointer-events: none; }
-.story-details .eyebrow { font-size: 11px; }
+.story-details {
+  bottom: clamp(245px, 35vh, 330px);
+  opacity: 0;
+  pointer-events: none;
+}
 .story-details h2,
 .polar-heading h2 {
   margin: 0;
@@ -74,7 +77,6 @@
 }
 .story-details h2 em,
 .polar-heading h2 em { color: #b8dfdc; font-style: normal; }
-.story-details h2 { margin-top: 24px; }
 .story-description {
   max-width: 660px;
   margin: 26px 0 0;
@@ -179,7 +181,7 @@
   .story-intro, .story-details { bottom: 190px; }
   .story-intro h1 { font-size: clamp(40px, 10vw, 56px); }
   .story-intro p { font-size: 15px; line-height: 1.65; }
-  .story-details .eyebrow { font-size: 9px; letter-spacing: .1em; }
+  .story-details { bottom: 225px; }
   .story-details h2 { font-size: clamp(42px, 10vw, 62px); }
   .story-description { margin-top: 18px; font-size: 14px; line-height: 1.55; }
   .story-facts { gap: 18px; margin-top: 20px; padding-top: 14px; }
