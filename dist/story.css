@@ -37,7 +37,7 @@
 .story-details { opacity: 0; pointer-events: none; }
 .story-details .eyebrow { font-size: 11px; }
 .story-kicker {
-  margin: 30px 0 14px;
+  margin: 20px 0 12px;
   color: #c9e5e2;
   font-size: 11px;
   font-weight: 700;
@@ -48,7 +48,7 @@
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
   font-weight: 500;
-  font-size: clamp(52px, 6.5vw, 104px);
+  font-size: clamp(50px, 5vw, 78px);
   line-height: 1.08;
   letter-spacing: -.025em;
 }
@@ -66,8 +66,8 @@
   display: flex;
   gap: clamp(24px, 4vw, 70px);
   max-width: 730px;
-  margin-top: 34px;
-  padding-top: 20px;
+  margin-top: 22px;
+  padding-top: 16px;
   border-top: 1px solid rgba(222, 246, 244, .38);
 }
 .story-facts div { display: flex; flex-direction: column; gap: 5px; }

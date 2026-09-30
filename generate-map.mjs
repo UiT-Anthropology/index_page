@@ -14,32 +14,15 @@ function project([longitude, latitude]) {
   return [center + distance * Math.sin(theta), center - distance * Math.cos(theta)];
 }
 
-function clipNorth(ring) {
-  const clipped = [];
-  for (let i = 0; i < ring.length; i++) {
-    const a = ring[i];
-    const b = ring[(i + 1) % ring.length];
-    const aInside = a[1] >= limit;
-    const bInside = b[1] >= limit;
-    if (aInside) clipped.push(a);
-    if (aInside !== bInside) {
-      const t = (limit - a[1]) / (b[1] - a[1]);
-      clipped.push([a[0] + t * (b[0] - a[0]), limit]);
-    }
-  }
-  return clipped;
-}
-
 function ringPath(ring) {
-  const points = clipNorth(ring);
-  if (points.length < 3) return '';
-  return points.map((point, index) => {
+  if (ring.length < 3) return '';
+  return ring.map((point, index) => {
     const [x, y] = project(point);
     return `${index ? 'L' : 'M'}${x.toFixed(1)},${y.toFixed(1)}`;
   }).join('') + 'Z';
 }
 
-const land = source.features.flatMap(({ geometry }) => {
+const land = source.features.filter((feature) => feature.bbox?.[3] >= limit).flatMap(({ geometry }) => {
   if (geometry.type === 'Polygon') return [geometry.coordinates];
   if (geometry.type === 'MultiPolygon') return geometry.coordinates;
   return [];
