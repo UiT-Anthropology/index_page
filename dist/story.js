@@ -1,6 +1,13 @@
 const track = document.querySelector('.story-track');
 const intro = document.querySelector('.story-intro');
 const details = document.querySelector('.story-details');
+const colorWash = document.querySelector('.story-color-wash');
+const heroNav = document.querySelector('.story-stage .glass-nav');
+const heroFoot = document.querySelector('.story-stage .hero-foot');
+const polarSection = document.querySelector('.polar-section');
+const polarHeading = document.querySelector('.polar-heading');
+const polarMap = document.querySelector('.polar-map-wrap > img');
+const polarPins = [...document.querySelectorAll('.animal-pin')];
 const teamSection = document.querySelector('.team-scroll');
 const teamViewport = document.querySelector('.team-viewport');
 const teamRow = document.querySelector('.team-row');
@@ -47,14 +54,28 @@ function updateStory() {
   if (reduceMotion.matches) {
     intro.removeAttribute('style');
     details.removeAttribute('style');
+    colorWash.removeAttribute('style');
+    heroNav.removeAttribute('style');
+    heroFoot.removeAttribute('style');
+    polarSection.removeAttribute('style');
+    polarHeading.removeAttribute('style');
+    polarMap.removeAttribute('style');
+    polarPins.forEach((pin) => {
+      pin.style.removeProperty('opacity');
+      pin.removeAttribute('tabindex');
+    });
     return;
   }
   const travel = Math.max(1, track.offsetHeight - window.innerHeight);
   const progress = clamp(-track.getBoundingClientRect().top / travel);
-  const introExit = ease((progress - .07) / .28);
-  const detailEnter = ease((progress - .34) / .22);
-  const detailExit = ease((progress - .80) / .17);
+  const introExit = ease((progress - .04) / .16);
+  const detailEnter = ease((progress - .20) / .12);
+  const detailExit = ease((progress - .47) / .12);
   const detailOpacity = detailEnter * (1 - detailExit);
+  const washEnter = ease((progress - .51) / .12);
+  const mapEnter = ease((progress - .64) / .11);
+  const pinsEnter = ease((progress - .73) / .09);
+  const headingEnter = ease((progress - .84) / .09);
 
   intro.style.opacity = (1 - introExit).toFixed(3);
   intro.style.transform = `translate3d(0, ${(-110 * introExit).toFixed(1)}px, 0)`;
@@ -62,6 +83,19 @@ function updateStory() {
   details.style.opacity = detailOpacity.toFixed(3);
   details.style.transform = `translate3d(0, ${(70 * (1 - detailEnter) - 80 * detailExit).toFixed(1)}px, 0)`;
   details.style.pointerEvents = detailOpacity > .9 ? 'auto' : 'none';
+  colorWash.style.opacity = washEnter.toFixed(3);
+  heroNav.style.opacity = (1 - washEnter).toFixed(3);
+  heroNav.style.pointerEvents = washEnter > .9 ? 'none' : 'auto';
+  heroFoot.style.opacity = (1 - washEnter).toFixed(3);
+  polarSection.style.pointerEvents = pinsEnter > .9 ? 'auto' : 'none';
+  polarMap.style.opacity = mapEnter.toFixed(3);
+  polarMap.style.transform = `translate3d(0, ${(45 * (1 - mapEnter)).toFixed(1)}px, 0)`;
+  polarPins.forEach((pin) => {
+    pin.style.opacity = pinsEnter.toFixed(3);
+    pin.tabIndex = pinsEnter > .9 ? 0 : -1;
+  });
+  polarHeading.style.opacity = headingEnter.toFixed(3);
+  polarHeading.style.transform = `translate3d(0, ${(40 * (1 - headingEnter)).toFixed(1)}px, 0)`;
 }
 
 function requestUpdate() {

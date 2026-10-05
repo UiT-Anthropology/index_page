@@ -1,15 +1,16 @@
 /* The scene stays in place while the two chapters move through it. */
 @font-face {
-  font-family: "Manrope";
-  src: url("./assets/fonts/Manrope-Variable.ttf") format("truetype");
+  font-family: "Outfit";
+  src: url("./assets/fonts/Outfit-Variable.ttf") format("truetype");
   font-style: normal;
-  font-weight: 200 800;
+  font-weight: 100 900;
   font-display: swap;
 }
 .glass-nav a {
-  font-family: "Manrope", "Helvetica Neue", Arial, sans-serif;
-  font-weight: 600;
-  letter-spacing: .035em;
+  font-family: "Outfit", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: .04em;
 }
 .site-shell { overflow: clip; }
 .brand-strip {
@@ -305,7 +306,7 @@
   .team-viewport { left: 34vw; }
 }
 @media (max-width: 620px) {
-  .glass-nav a { letter-spacing: .015em; }
+  .glass-nav a { font-size: 14px; letter-spacing: 0; }
   .brand-strip { height: 68px; }
   .brand-placeholder { gap: 10px; font-size: 9px; }
   .brand-placeholder-mark { width: 29px; height: 29px; font-size: 18px; }
@@ -348,4 +349,63 @@
   .team-row { position: relative; top: auto; left: auto; width: auto; flex-direction: row; flex-wrap: wrap; justify-content: center; transform: none !important; }
   .animal-pin { transition: none; }
   .pin-popup.is-open, .pin-popup.is-closing { animation: none; }
+}
+
+/* One pinned scene carries the image through color, map, pins, and invitation. */
+.story-track { height: 550svh; }
+.story-stage.hero { background: #071724; }
+.story-color-wash {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background: #071724;
+  opacity: 0;
+  pointer-events: none;
+}
+.story-intro, .story-details, .story-stage .hero-foot { z-index: 2; }
+.story-stage .glass-nav { will-change: opacity; }
+.story-stage .polar-section {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  min-height: 0;
+  grid-template-columns: minmax(270px, .72fr) minmax(420px, 1.28fr);
+  padding-top: clamp(95px, 12vh, 150px);
+  padding-bottom: clamp(65px, 9vh, 110px);
+  background: transparent;
+  border: 0;
+  pointer-events: none;
+}
+.story-stage .polar-heading,
+.story-stage .polar-map-wrap > img,
+.story-stage .animal-pin { opacity: 0; }
+.story-stage .polar-heading,
+.story-stage .polar-map-wrap > img { will-change: opacity, transform; }
+.story-stage .polar-map-wrap { width: min(100%, 720px); }
+.story-stage .animal-pin { transition: opacity .1s, top .62s cubic-bezier(.22, 1, .36, 1), left .62s cubic-bezier(.22, 1, .36, 1), width .62s cubic-bezier(.22, 1, .36, 1), transform .22s ease, box-shadow .35s ease; }
+@media (max-width: 900px) {
+  .story-stage .polar-section { grid-template-columns: 1fr; align-content: center; gap: 5vh; }
+  .story-stage .polar-heading { min-height: 0; }
+  .story-stage .polar-map-wrap { width: min(100%, 570px); }
+}
+@media (max-width: 620px) {
+  .story-track { height: 520svh; }
+  .story-stage .polar-section { padding-top: 75px; padding-bottom: 35px; gap: 12px; }
+  .story-stage .polar-heading h2 { margin-top: 0; font-size: clamp(35px, 9vw, 50px); }
+  .story-stage .polar-heading-spacer { display: none; }
+  .story-stage .polar-map-wrap { width: min(100%, 480px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .story-track { height: auto; }
+  .story-color-wash { display: none; }
+  .story-stage .polar-section {
+    position: relative;
+    inset: auto;
+    min-height: auto;
+    padding: 100px 0 15px;
+    pointer-events: auto;
+  }
+  .story-stage .polar-heading,
+  .story-stage .polar-map-wrap > img,
+  .story-stage .animal-pin { opacity: 1; }
 }

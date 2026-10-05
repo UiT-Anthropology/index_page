@@ -1,0 +1,57 @@
+.partners-section {
+  padding-top: clamp(84px, 10vw, 150px);
+  padding-bottom: clamp(95px, 11vw, 155px);
+  background: #0b2330;
+}
+
+.partners-heading { max-width: 700px; margin-bottom: clamp(64px, 8vw, 110px); }
+.partners-kicker {
+  color: #91c9c6;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .23em;
+}
+.partners-heading h2 {
+  margin: 20px 0 16px;
+  font: 500 clamp(54px, 7vw, 104px)/1 Georgia, "Times New Roman", serif;
+  letter-spacing: -.045em;
+}
+.partners-heading p { margin: 0; color: #a9c2c5; font-size: 16px; line-height: 1.7; }
+
+.partner-group { margin-top: 54px; }
+.partner-group h3 {
+  margin: 0 0 22px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(218, 240, 237, .24);
+  color: #dcebea;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+.partner-logo-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.partner-logo-slot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  min-height: 178px;
+  padding: 26px;
+  border: 1px dashed rgba(185, 218, 218, .3);
+  background: rgba(218, 240, 237, .035);
+  color: #78989d;
+  text-align: center;
+}
+.partner-logo-slot span { font: 38px/1 Georgia, serif; }
+.partner-logo-slot small { font-size: 10px; letter-spacing: .18em; }
+
+@media (max-width: 900px) {
+  .partner-logo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 620px) {
+  .partner-logo-grid { gap: 10px; }
+  .partner-logo-slot { min-height: 135px; padding: 15px; }
+  .partner-logo-slot span { font-size: 30px; }
+  .partner-logo-slot small { font-size: 9px; letter-spacing: .1em; }
+}
