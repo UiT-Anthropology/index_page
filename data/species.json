@@ -1,0 +1,625 @@
+{
+  "cases": [
+    {
+      "id": "reindeer",
+      "name": "Reindeer",
+      "region": "Norway · Sápmi",
+      "place": "Kárášjohka / Karasjok",
+      "title": "Herding, technology and Sámi knowledge",
+      "summary": "Exploring how drone technology can support reindeer herding while respecting Sámi knowledge, animals and landscapes.",
+      "themes": [
+        "Sámi knowledge",
+        "Herding",
+        "Technology"
+      ],
+      "people": [
+        "vegard-nergard",
+        "piers-vitebsky"
+      ],
+      "body": [
+        "Reindeer herding is central to Sámi culture and livelihoods. Access to pastures is increasingly affected by competing land uses, environmental pressures and state management.",
+        "Working with Sámi herders, leaders and knowledge holders, this case investigates how drones might help locate and monitor herds, follow migration and identify environmental threats. It also asks how new technologies interact with traditional knowledge and relationships between generations of herders.",
+        "The project plans to jointly test and evaluate suitable drones, considering how technology can support herders without disturbing reindeer or the surrounding environment."
+      ],
+      "methods": "Collaborative fieldwork, dialogue with herders and the joint testing of drone technologies.",
+      "source": "main"
+    },
+    {
+      "id": "king-crabs",
+      "name": "King crabs",
+      "region": "Norway · Sápmi",
+      "place": "Northern Norway, with trade connections to China",
+      "title": "Fisheries, livelihoods and global markets",
+      "summary": "Following the connections between Arctic fisheries, marine ecosystems, local livelihoods and international markets.",
+      "themes": [
+        "Fisheries",
+        "Marine ecology",
+        "Global markets"
+      ],
+      "people": [
+        "richard-fraser",
+        "jannike-falk-andersson"
+      ],
+      "body": [
+        "King crab fishing has become a lucrative industry in Northern Norway. Its expansion also raises questions about ecological change, seabed impacts and the future of local livelihoods.",
+        "This case brings local and Indigenous fishers, marine biologists and anthropologists into dialogue about the relationship between fishing, community livelihoods and sustainable marine ecosystems.",
+        "The research also follows live king crabs from northern Norway to restaurants and hotels in China. QR codes accompanying exported crabs connect consumers to stories about fishers, their families and claims to sustainability, opening questions about how Arctic marine life becomes entangled in global markets."
+      ],
+      "methods": "Collaborative research with fishers, marine biology and anthropological work following international trade connections.",
+      "source": "main"
+    },
+    {
+      "id": "wild-ducks",
+      "name": "Wild ducks",
+      "region": "Norway · Sápmi",
+      "place": "Sápmi",
+      "title": "A collaboration between research and art",
+      "summary": "Wild ducks are one of the seven species in SPECIES, bringing research into dialogue with Sámi artistic practice.",
+      "themes": [
+        "Art",
+        "Multispecies relations"
+      ],
+      "people": [
+        "tommy-ose",
+        "niillas-holmberg",
+        "elina-waage-mikalsen"
+      ],
+      "body": [
+        "The project overview identifies wild ducks as one of the seven species explored by SPECIES. It names Tommy Ose and Sámi artists Niillas Holmberg and Elina Waage Mikalsen as contributors.",
+        "A detailed account of this case will be shared as the collaboration develops."
+      ],
+      "methods": "Research and artistic collaboration.",
+      "source": "main"
+    },
+    {
+      "id": "seals",
+      "name": "Baltic seals",
+      "region": "Finland",
+      "place": "Bothnian Bay, including Ajos",
+      "title": "Hunting, tradition and changing marine relations",
+      "summary": "Learning with coastal communities about the relationships between people, seals, fish and the sea.",
+      "themes": [
+        "Traditional knowledge",
+        "Fishing and hunting",
+        "Marine relations"
+      ],
+      "people": [
+        "florian-stammler",
+        "heidi-konttinen",
+        "aytalina-ivanova",
+        "nuccio-mazzullo"
+      ],
+      "body": [
+        "Seal hunting has been part of livelihoods and marine relationships in the Bothnian Bay for centuries. Changing ecological and regulatory conditions have reshaped how communities hunt, use their catch and pass on knowledge.",
+        "The case explores different understandings of hunting, animal care and sustainability. It asks whose priorities are recognised in management and how relationships between humans, seals and fish can be understood through everyday practice.",
+        "Spring and summer 2026 fieldwork in Ajos brought researchers onto fishing boats and sea ice with local hosts. Their accounts describe fish traps, acoustic deterrents, the seasonal rhythm of fishing and hunting, and the work involved in using skins and other materials."
+      ],
+      "methods": "Participant observation, interviews and learning through shared fishing, hunting and material practices.",
+      "image": "seal-skins.webp",
+      "imageAlt": "Stacks of seal skins beside larger animal hides in a workshop",
+      "credit": "Photograph supplied with the SPECIES Finland fieldwork materials; photographer not specified.",
+      "stories": [
+        "ajos",
+        "seal-practices"
+      ],
+      "source": "florian"
+    },
+    {
+      "id": "lapland-cattle",
+      "name": "Lapland cattle",
+      "region": "Finland",
+      "place": "Finnish Lapland",
+      "title": "Genetic heritage and Arctic resilience",
+      "summary": "Connecting the cultural value of Northern Finncattle with research into adaptation, resilience and genetic conservation.",
+      "themes": [
+        "Genetic conservation",
+        "Arctic adaptation",
+        "Farming"
+      ],
+      "people": [
+        "nuccio-mazzullo",
+        "juha-kantanen",
+        "kisun-pokharel",
+        "rodney-okwasiimire",
+        "melak-weldenegodguad",
+        "jonne-pohjankukka"
+      ],
+      "body": [
+        "Northern Finncattle, known in Finnish as Lapin Lehmä, have long been part of the livelihoods of Finnish Lapland. After the breed was reduced almost to extinction, conservation efforts helped restore its population.",
+        "This case combines anthropology and genetics to investigate relationships between local accounts of resilience, cultural understandings of sustainability and the biological characteristics of the breed.",
+        "The Luke animal genomics team studies whole genomes, gene expression and regulatory mechanisms associated with environmental adaptation. Its wider comparative work includes other northern cattle breeds, reindeer and horses, connecting local conservation questions to research across northern environments."
+      ],
+      "methods": "Anthropological fieldwork, whole-genome sequencing, transcriptomics, microRNA profiling and comparative bioinformatics.",
+      "image": "finncattle-pasture.webp",
+      "imageAlt": "White Northern Finncattle grazing together in a green pasture",
+      "credit": "Photo: Annu Puurunen. Supplied in the Luke September 2026 update.",
+      "stories": [
+        "genomics",
+        "bovine-symposium",
+        "multiomics-workshop"
+      ],
+      "source": "luke"
+    },
+    {
+      "id": "polar-bears",
+      "name": "Polar bears",
+      "region": "Greenland",
+      "place": "Ittoqqortoormiit, East Greenland",
+      "title": "Predation, climate change and food security",
+      "summary": "Exploring changing encounters between polar bears and people, and their connections to hunting, safety and food security.",
+      "themes": [
+        "Climate change",
+        "Food security",
+        "Human–animal relations"
+      ],
+      "people": [
+        "janne-flora",
+        "floris-van-beest"
+      ],
+      "body": [
+        "In Ittoqqortoormiit, encounters with hungry polar bears are a concern for local residents. Community members connect these encounters to changing sea ice, bear populations and wildlife management.",
+        "Polar bears have long been sources of food and skins in Indigenous communities. Changes in hunting opportunities and environmental conditions raise questions about safety, food security and the future of local hunting practices.",
+        "Working with hunters, families and local wildlife-management practitioners, this case investigates how different understandings of predation and sustainability intersect with climate change, colonial histories and geopolitical interests."
+      ],
+      "methods": "Collaborative research with hunters, families and wildlife-management practitioners.",
+      "source": "main"
+    },
+    {
+      "id": "muskoxen",
+      "name": "Muskoxen",
+      "region": "Greenland",
+      "place": "Kangerlussuaq and Zackenberg",
+      "title": "Modelling sustainable coexistence",
+      "summary": "Bringing ecological modelling, anthropology and Inuit knowledge together to explore sustainable muskox management.",
+      "themes": [
+        "Ecological modelling",
+        "Co-creation",
+        "Wildlife management"
+      ],
+      "people": [
+        "astrid-andersen",
+        "floris-van-beest",
+        "benjamin-dupuis",
+        "niels-martin-schmidt"
+      ],
+      "body": [
+        "Introduced muskoxen have become part of changing ecological relationships and hunting livelihoods around Kangerlussuaq in West Greenland. SPECIES WP3 asks how they can be managed in a rapidly changing Arctic.",
+        "The team is developing an ecological modelling framework that connects individual movement, behaviour and energy use with population trends. It is intended to explore cumulative effects of environmental change and different hunting scenarios.",
+        "Model development draws primarily on data from Zackenberg in Northeast Greenland. Anthropological fieldwork and collaboration with hunters and wildlife managers focus on Kangerlussuaq in West Greenland. These are distinct, complementary research settings.",
+        "Through co-creation, the concerns of hunters and other stakeholders will help shape model inputs and hypothetical scenarios. The planned conservation toolkit could support discussions about quotas, habitat monitoring and livelihoods; it remains a research output in development."
+      ],
+      "methods": "Population monitoring, spatial ecological modelling, anthropological fieldwork and the co-design of management scenarios.",
+      "image": "muskox-model.png",
+      "imageAlt": "Working conceptual diagram connecting muskox foraging, energy reserves, movement costs and reproduction",
+      "credit": "Working conceptual diagram supplied by the SPECIES WP3 team.",
+      "stories": [
+        "muskox-model"
+      ],
+      "source": "wp3"
+    }
+  ],
+  "people": [
+    {
+      "id": "richard-fraser",
+      "name": "Richard Fraser",
+      "institution": "UiT",
+      "role": "Project leadership · King crabs",
+      "cases": [
+        "king-crabs"
+      ],
+      "bio": "Richard leads SPECIES and contributes to the king crab case, connecting Arctic fisheries, local livelihoods and global markets.",
+      "source": "main"
+    },
+    {
+      "id": "astrid-andersen",
+      "name": "Astrid Oberborbeck Andersen",
+      "institution": "Aalborg University",
+      "role": "Anthropology · Muskoxen",
+      "cases": [
+        "muskoxen"
+      ],
+      "bio": "Astrid contributes anthropological research and collaboration with hunters and wildlife managers to the muskox case in West Greenland.",
+      "orcid": "0000-0002-7811-1427",
+      "source": "wp3"
+    },
+    {
+      "id": "floris-van-beest",
+      "name": "Floris M. van Beest",
+      "institution": "Aarhus University · Department of Ecoscience",
+      "role": "Senior Researcher · Animal ecology",
+      "cases": [
+        "muskoxen",
+        "polar-bears"
+      ],
+      "image": "floris-van-beest.webp",
+      "bio": "Floris studies movement ecology, population biology, climate change and ecological modelling. He combines empirical data, statistical analysis and agent-based models to understand how environmental variation and human pressures affect animal movement, fitness and population dynamics.",
+      "orcid": "0000-0002-5701-4927",
+      "source": "wp3profiles"
+    },
+    {
+      "id": "benjamin-dupuis",
+      "name": "Benjamin Dupuis",
+      "institution": "Aarhus University · Department of Ecoscience",
+      "role": "Postdoctoral researcher · Ecological modelling",
+      "cases": [
+        "muskoxen"
+      ],
+      "image": "benjamin-dupuis.webp",
+      "bio": "Benjamin works in movement ecology and population biology. Combining empirical data, bio-logging and agent-based modelling, he investigates how animals’ physiological and behavioural responses to environmental variation and human activities affect population dynamics.",
+      "orcid": "0000-0001-9633-8935",
+      "source": "wp3profiles"
+    },
+    {
+      "id": "florian-stammler",
+      "name": "Florian Stammler",
+      "institution": "University of Lapland",
+      "role": "Anthropology · Baltic seals",
+      "cases": [
+        "seals"
+      ],
+      "bio": "Florian contributes to the Finland fieldwork team, learning with coastal communities about fishing, seal hunting, marine relationships and material practices.",
+      "source": "florian"
+    },
+    {
+      "id": "heidi-konttinen",
+      "name": "Heidi Konttinen",
+      "institution": "Finland fieldwork team",
+      "role": "Doctoral research · Seal-related material practices",
+      "cases": [
+        "seals"
+      ],
+      "image": "heidi-winter.webp",
+      "bio": "Heidi’s doctoral research focuses on practices involving seal skins and fat. She contributes to documenting the knowledge, skills and cultural relationships involved in the Bothnian Bay sealing tradition.",
+      "source": "florian"
+    },
+    {
+      "id": "juha-kantanen",
+      "name": "Juha Kantanen",
+      "institution": "Natural Resources Institute Finland (Luke)",
+      "role": "Professor of Livestock Genomics",
+      "cases": [
+        "lapland-cattle",
+        "seals"
+      ],
+      "image": "juha-kantanen.webp",
+      "bio": "Juha works on animal genetic resources, molecular and population genetics, animal genomics and the valuation of genetic resources. His multidisciplinary research includes livestock genetic resources across northern Eurasia.",
+      "source": "luke"
+    },
+    {
+      "id": "kisun-pokharel",
+      "name": "Kisun Pokharel",
+      "institution": "Natural Resources Institute Finland (Luke)",
+      "role": "Senior Scientist · Genomics and bioinformatics",
+      "cases": [
+        "lapland-cattle"
+      ],
+      "image": "kisun-pokharel.webp",
+      "bio": "Kisun studies genome assembly, functional genomics and population genomics in livestock, reindeer and fish. He uses sequencing and computational approaches to investigate genetic diversity and adaptation in northern breeds and species.",
+      "source": "luke"
+    },
+    {
+      "id": "rodney-okwasiimire",
+      "name": "Rodney Okwasiimire",
+      "institution": "University of Helsinki · Luke",
+      "role": "Doctoral Researcher",
+      "cases": [
+        "lapland-cattle"
+      ],
+      "image": "rodney-okwasiimire.webp",
+      "bio": "Rodney integrates whole-genome sequencing, genome assembly and population genomics to investigate genetic diversity and adaptation in indigenous African cattle, building on experience in molecular diagnostics and livestock disease epidemiology.",
+      "source": "luke"
+    },
+    {
+      "id": "melak-weldenegodguad",
+      "name": "Melak Weldenegodguad",
+      "institution": "Natural Resources Institute Finland (Luke)",
+      "role": "Research Scientist · Genomics and bioinformatics",
+      "cases": [
+        "lapland-cattle"
+      ],
+      "image": "melak-weldenegodguad.webp",
+      "bio": "Melak combines genomics, transcriptomics and bioinformatics to study adaptation and biological diversity in domesticated and wild animals. His interests include multi-omics integration, functional genomics and environmental adaptation.",
+      "source": "luke"
+    },
+    {
+      "id": "jonne-pohjankukka",
+      "name": "Jonne Pohjankukka",
+      "institution": "Natural Resources Institute Finland (Luke)",
+      "role": "Senior Scientist · Artificial intelligence methods",
+      "cases": [
+        "lapland-cattle"
+      ],
+      "image": "jonne-pohjankukka.webp",
+      "bio": "Jonne coordinates artificial intelligence method services at Luke. His experience includes computer vision, sensor fusion, remotely sensed data and automated systems for environmental observation.",
+      "source": "luke"
+    },
+    {
+      "id": "nuccio-mazzullo",
+      "name": "Nuccio Mazzullo",
+      "institution": "University of Lapland",
+      "role": "Anthropology · Finland cases",
+      "cases": [
+        "lapland-cattle",
+        "seals"
+      ],
+      "bio": "Nuccio contributes anthropological research on Lapland cattle and is part of the Rovaniemi team conducting multispecies fieldwork in Finland.",
+      "source": "main"
+    },
+    {
+      "id": "aytalina-ivanova",
+      "name": "Aytalina Ivanova",
+      "institution": "Finland fieldwork team",
+      "role": "Fieldwork contributor",
+      "cases": [
+        "seals"
+      ],
+      "bio": "Aytalina is part of the Rovaniemi team conducting multispecies fieldwork in Finland, including the spring and summer 2026 work with coastal communities.",
+      "source": "florian"
+    },
+    {
+      "id": "vegard-nergard",
+      "name": "Vegard Nergård",
+      "institution": "UiT",
+      "role": "Reindeer case contributor",
+      "cases": [
+        "reindeer"
+      ],
+      "bio": "Vegard contributes to research on reindeer herding, technology and Sámi knowledge.",
+      "source": "main"
+    },
+    {
+      "id": "piers-vitebsky",
+      "name": "Piers Vitebsky",
+      "institution": "Cambridge",
+      "role": "Reindeer case contributor",
+      "cases": [
+        "reindeer"
+      ],
+      "bio": "Piers contributes to the reindeer case, exploring the relationships between herding, technology and Sámi knowledge.",
+      "source": "main"
+    },
+    {
+      "id": "jannike-falk-andersson",
+      "name": "Jannike Falk-Andersson",
+      "institution": "NIVA",
+      "role": "King crab case contributor",
+      "cases": [
+        "king-crabs"
+      ],
+      "bio": "Jannike contributes to research on king crabs, marine ecosystems and sustainable fisheries.",
+      "source": "main"
+    },
+    {
+      "id": "janne-flora",
+      "name": "Janne Flora",
+      "institution": "Aarhus University",
+      "role": "Polar bear case contributor",
+      "cases": [
+        "polar-bears"
+      ],
+      "bio": "Janne contributes to research on changing human–polar bear relationships in East Greenland.",
+      "source": "main"
+    },
+    {
+      "id": "niels-martin-schmidt",
+      "name": "Niels Martin Schmidt",
+      "institution": "Aarhus University",
+      "role": "Muskox case contributor",
+      "cases": [
+        "muskoxen"
+      ],
+      "bio": "Niels Martin Schmidt is a contributor to the project’s research on muskoxen and changing ecological relationships in Greenland.",
+      "source": "main"
+    },
+    {
+      "id": "tommy-ose",
+      "name": "Tommy Ose",
+      "institution": "UiT",
+      "role": "Wild duck case contributor",
+      "cases": [
+        "wild-ducks"
+      ],
+      "bio": "Tommy contributes to the wild duck case, which brings research into dialogue with Sámi artistic practice.",
+      "source": "main"
+    },
+    {
+      "id": "niillas-holmberg",
+      "name": "Niillas Holmberg",
+      "institution": "Sámi artistic collaboration",
+      "role": "Artist · Wild ducks",
+      "cases": [
+        "wild-ducks"
+      ],
+      "bio": "Niillas contributes Sámi artistic perspectives to the wild duck case.",
+      "source": "main"
+    },
+    {
+      "id": "elina-waage-mikalsen",
+      "name": "Elina Waage Mikalsen",
+      "institution": "Sámi artistic collaboration",
+      "role": "Artist · Wild ducks",
+      "cases": [
+        "wild-ducks"
+      ],
+      "bio": "Elina contributes Sámi artistic perspectives to the wild duck case.",
+      "source": "main"
+    }
+  ],
+  "stories": [
+    {
+      "id": "ajos",
+      "title": "People, seals and salmon in Ajos",
+      "category": "Field story",
+      "period": "Spring–summer 2026",
+      "region": "Finland",
+      "case": "seals",
+      "summary": "On fishing boats in the Bothnian Bay, the fieldwork team learns how people negotiate everyday relationships with seals and salmon.",
+      "byline": "Adapted from Florian Stammler’s Finland fieldwork update",
+      "body": [
+        [
+          "Learning at sea",
+          "In the small port of Ajos, fishing and seal hunting belong to the histories of many of the same families. Spring and summer fieldwork brought the Rovaniemi team into these overlapping practices, learning with hosts through time spent together on the sea."
+        ],
+        [
+          "Technology in a multispecies relationship",
+          "Fishers demonstrated large traps mounted on inflatable runners. A compressor raises the traps so that the catch can be retrieved. The team also encountered acoustic deterrent devices near traps, intended to discourage seals from approaching the catch.",
+          "For the researchers, these technologies opened questions about the relationship between people, fish and seals. They approached the equipment as part of how fishers negotiate access to a shared marine environment, while recording concerns about its effects on animals."
+        ],
+        [
+          "Participation as a research method",
+          "The team joined fishing and processing activities, learning through practical participation as well as conversation. Preparing and sharing food also revealed seasonal traditions, including a midsummer meal of salmon heads.",
+          "These encounters show why the project works across species and practices: fishing, hunting, technology, food and knowledge transmission cannot be understood in isolation from one another."
+        ]
+      ],
+      "source": "florian"
+    },
+    {
+      "id": "seal-practices",
+      "title": "Knowledge carried through materials",
+      "category": "Field story",
+      "period": "Spring 2026",
+      "region": "Finland",
+      "case": "seals",
+      "summary": "Sea-ice hunting, skins and shared practical work offer ways to understand the cultural relationships surrounding Baltic seals.",
+      "byline": "Adapted from Florian Stammler’s Finland fieldwork update",
+      "image": "seal-skins.webp",
+      "imageAlt": "Seal skins stacked beside other animal hides in a workshop",
+      "credit": "Image supplied with the Finland fieldwork materials. Photographer not specified; the photograph is not assigned a fieldwork location.",
+      "body": [
+        [
+          "Learning on the ice",
+          "The fieldwork report describes a long trip around the turn of April and May, during which the researchers accompanied local hunters on the sea ice. They observed the patience, skill and practical judgement involved in finding and approaching a seal.",
+          "An important principle described by hosts was the ability to retrieve an animal after a shot. The choice of position therefore involved both marksmanship and a responsibility to recover the seal."
+        ],
+        [
+          "Making, using and passing on knowledge",
+          "The work continued through processing meat, handling skins and separating fat. Heidi Konttinen’s doctoral research focuses particularly on practices involving skins and fat.",
+          "The report also records local accounts of seal fat used in traditional paint. Such material practices connect hunting knowledge to the care of buildings, everyday skills and the transmission of cultural knowledge."
+        ],
+        [
+          "Relationships beyond an economic measure",
+          "The researchers describe sealing as emotionally and culturally significant to their hosts. Through participation, the team asks how management and public debate can recognise these relationships, alongside ecological concerns."
+        ]
+      ],
+      "source": "florian"
+    },
+    {
+      "id": "muskox-model",
+      "title": "From movement to muskox populations",
+      "category": "Research update",
+      "period": "WP3 project update · 2026 materials",
+      "region": "Greenland",
+      "case": "muskoxen",
+      "summary": "A research visit to Winnipeg helped the WP3 team develop the connection between animal movement, energy budgets and population change.",
+      "byline": "Adapted from the SPECIES WP3 project update",
+      "image": "muskox-model.png",
+      "imageAlt": "Conceptual research diagram linking muskox foraging and movement with energy reserves and reproduction",
+      "credit": "SPECIES WP3 working conceptual diagram. This is a research framework, not a completed simulation result.",
+      "body": [
+        [
+          "Building on an existing model",
+          "Benjamin Dupuis visited a colleague at the University of Winnipeg in Canada to discuss an existing model of muskox population responses to climate change. Together, they explored how to incorporate the costs and benefits animals experience while moving through Arctic landscapes."
+        ],
+        [
+          "Connecting behaviour and energy",
+          "The developing framework links foraging and movement to energy reserves and allocation. These individual processes provide a route towards understanding changes at population level.",
+          "The team intends to explore responses to snow conditions and hunting events. Collaboration with Astrid Oberborbeck Andersen will help connect scenario development with anthropological research and the concerns of hunters."
+        ],
+        [
+          "A tool in development",
+          "The longer-term aim is to co-design a conservation toolkit with hunters and wildlife managers. The work described here is model development; management scenarios and results will be shared as the research progresses."
+        ]
+      ],
+      "source": "wp3update"
+    },
+    {
+      "id": "genomics",
+      "title": "Reading Arctic adaptation in the genome",
+      "category": "Research update",
+      "period": "September 2026",
+      "region": "Finland",
+      "case": "lapland-cattle",
+      "summary": "The Luke team combines genomic and gene-expression data to investigate the resilience of northern livestock breeds.",
+      "byline": "Adapted from the Luke September 2026 website update",
+      "image": "finncattle-woodland.webp",
+      "imageAlt": "Northern Finncattle standing in a wooded landscape",
+      "credit": "Photo: Juha Kantanen. Supplied in the Luke September 2026 update.",
+      "body": [
+        [
+          "Northern breeds, connected questions",
+          "Northern Finncattle are at the centre of research into how livestock adapt to northern environments. The Luke team’s wider comparative work also includes other cattle breeds, reindeer and horses."
+        ],
+        [
+          "Combining different layers of evidence",
+          "Whole-genome sequencing, messenger RNA and microRNA analyses help the team investigate mechanisms associated with adaptation, metabolism and thermoregulation. Comparative bioinformatics connects these datasets across populations and environments."
+        ],
+        [
+          "Conservation and cultural significance",
+          "The project overview links genetic research with anthropological questions about how resilience and sustainability are understood in local farming environments. Conservation of native breeds concerns biological diversity as well as livelihoods, histories and cultural value.",
+          "The September update reports publications in preparation and future work on multi-omics integration and machine learning. These are ongoing research activities."
+        ]
+      ],
+      "source": "luke"
+    },
+    {
+      "id": "bovine-symposium",
+      "title": "Northern Eurasian bovine genetic resources",
+      "category": "Conference",
+      "period": "16–18 September 2026",
+      "region": "International collaboration",
+      "case": "lapland-cattle",
+      "summary": "Juha Kantanen’s presentation at the International Symposium on Bovine Genetic Resources in Changchun, China.",
+      "byline": "Activity reported in the Luke September 2026 update",
+      "body": [
+        [
+          "Sharing research across regions",
+          "The Luke update records an oral presentation by Juha Kantanen, “Northern Eurasian Bovine Genetic Resources”, at the International Symposium on Bovine Genetic Resources 2026, held at Jilin Agricultural University in Changchun, China, on 16–18 September 2026."
+        ]
+      ],
+      "source": "luke"
+    },
+    {
+      "id": "multiomics-workshop",
+      "title": "Machine learning for multi-omics integration",
+      "category": "Workshop",
+      "period": "15–17 December 2025",
+      "region": "International collaboration",
+      "case": "lapland-cattle",
+      "summary": "Kisun Pokharel’s workshop activity at the University of Barcelona, recorded in the Luke project update.",
+      "byline": "Activity reported in the Luke September 2026 update",
+      "body": [
+        [
+          "Connecting computational approaches",
+          "The Luke update records Kisun Pokharel’s participation in the workshop “Machine Learning for Multi-Omics Integration”, held on 15–17 December 2025 at the University of Barcelona’s Faculty of Biology, within the Department of Evolutionary Biology, Ecology and Environmental Sciences and IRBio."
+        ]
+      ],
+      "source": "luke"
+    }
+  ],
+  "sources": {
+    "main": {
+      "title": "SPECIES Website Main Content",
+      "url": "https://docs.google.com/document/d/1Om3zUqRkrsxlwTJbpANQggBx7gRJ66hZ/edit"
+    },
+    "florian": {
+      "title": "Finland fieldwork update · September 2026",
+      "url": "https://docs.google.com/document/d/1G8KmD5L9oyJVKoaWdYUqAlma00_3R8RL/edit"
+    },
+    "luke": {
+      "title": "Luke website update · September 2026",
+      "url": "./assets/species/luke-research-update.pdf"
+    },
+    "wp3": {
+      "title": "SPECIES WP3 research overview",
+      "url": "https://docs.google.com/document/d/1AvBaNC2l7R4oWGuRP61jTrS5i55SUX_7/edit"
+    },
+    "wp3profiles": {
+      "title": "SPECIES WP3 profiles",
+      "url": "https://drive.google.com/file/d/1f3shr4tSJWoDranq8eIsIftezQwEaAGN/view"
+    },
+    "wp3update": {
+      "title": "SPECIES WP3 project update",
+      "url": "https://drive.google.com/file/d/1f3shr4tSJWoDranq8eIsIftezQwEaAGN/view"
+    }
+  }
+}

@@ -6,6 +6,7 @@ const heroFoot = document.querySelector('.story-stage .hero-foot');
 const polarSection = document.querySelector('.polar-section');
 const polarHeading = document.querySelector('.polar-heading');
 const polarMap = document.querySelector('.polar-map-wrap > img');
+const mapCallouts = document.querySelector('.map-callouts');
 const polarPins = [...document.querySelectorAll('.animal-pin')];
 const teamSection = document.querySelector('.team-scroll');
 const teamViewport = document.querySelector('.team-viewport');
@@ -58,6 +59,7 @@ function updateStory() {
     polarSection.removeAttribute('style');
     polarHeading.removeAttribute('style');
     polarMap.removeAttribute('style');
+    if (mapCallouts) mapCallouts.style.opacity = '1';
     polarPins.forEach((pin) => {
       pin.style.removeProperty('opacity');
       pin.removeAttribute('tabindex');
@@ -85,6 +87,7 @@ function updateStory() {
   heroFoot.style.opacity = (1 - washEnter).toFixed(3);
   polarSection.style.pointerEvents = pinsEnter > .9 ? 'auto' : 'none';
   polarMap.style.opacity = mapEnter.toFixed(3);
+  if (mapCallouts) mapCallouts.style.opacity = mapEnter.toFixed(3);
   polarMap.style.transform = `translate3d(0, ${(45 * (1 - mapEnter)).toFixed(1)}px, 0)`;
   polarPins.forEach((pin) => {
     pin.style.opacity = pinsEnter.toFixed(3);

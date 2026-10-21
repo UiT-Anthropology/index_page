@@ -4,62 +4,43 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#071724" />
-    <meta name="description" content="An Arctic research showcase bringing environmental observation, fieldwork, and visual storytelling together." />
-    <title>Between Ice and Light · Arctic Research</title>
+    <meta name="description" content="Exploring environmental conflicts and sustainable multispecies futures with researchers, local and Indigenous communities, and artists across Norway, Finland and Greenland." />
+    <title>SPECIES · Sustainable Species in the Arctic</title>
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet" href="./layout.css" />
     <link rel="stylesheet" href="./story.css" />
     <link rel="stylesheet" href="./partners.css" />
     <link rel="stylesheet" href="./header.css" />
     <script src="./header.js" defer></script>
-  </head>
+  <link rel="stylesheet" href="./species.css" />
+</head>
   <body>
     <a class="skip-link" href="#main">Skip to main content</a>
     <div class="site-shell" id="top">
       <header class="site-header">
-        <a class="brand-placeholder header-brand" href="#top" aria-label="Arctic Research home"><span class="brand-placeholder-mark" aria-hidden="true">◇</span><span>PROJECT LOGO</span></a>
-        <nav class="header-links" aria-label="Main navigation">
-          <a href="#projects">Project Showcase</a>
-          <a href="./team.html">The Team</a>
-          <a href="./multimedia.html">Multimedia</a>
-          <a href="./field-notes.html">Field Notes</a>
-        </nav>
-        <button class="header-menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="header-menu">
-          <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
-        </button>
-        <nav class="header-menu" id="header-menu" aria-label="All navigation" hidden>
-          <span class="header-menu-title">Explore</span>
-          <a href="./index.html" aria-current="page">Home</a>
-          <a href="#projects">Project Showcase</a>
-          <a href="./team.html">The Team</a>
-          <a href="./multimedia.html">Multimedia</a>
-          <a href="./field-notes.html">Field Notes</a>
-
-          <a href="#partners">Our partners</a>
-        </nav>
-      </header>
+      <a class="brand-placeholder header-brand" href="./index.html" aria-label="SPECIES home"><span class="brand-placeholder-mark" aria-hidden="true">S</span><span>SPECIES</span></a>
+      <nav class="header-links" aria-label="Main navigation"><a href="./cases.html">Case Studies</a><a href="./team.html">The Team</a><a href="./multimedia.html">Multimedia</a><a href="./field-notes.html">Field Notes</a></nav>
+      <button class="header-menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="header-menu"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
+      <nav class="header-menu" id="header-menu" aria-label="All navigation" hidden><span class="header-menu-title">Explore</span><a href="./index.html">Home</a><a href="./about.html">About the project</a><a href="./cases.html">Case Studies</a><a href="./team.html">The Team</a><a href="./multimedia.html">Multimedia</a><a href="./field-notes.html">Field Notes</a><a href="./index.html#partners">Research institutions</a></nav>
+    </header>
       <main id="main">
         <section class="story-track" aria-label="Introduction to the Arctic research project">
         <div class="hero story-stage">
-          <div class="hero-image" role="img" aria-label="An Arctic glacier at night with a meteor streaking across the sky"></div>
+          <div class="hero-image" role="img" aria-label="Conceptual illustration of an Arctic glacier at night with a meteor in the sky"></div>
           <div class="hero-shade"></div>
           <div class="story-color-wash" aria-hidden="true"></div>
 
           <div class="hero-content story-intro">
-            <h1 id="hero-title">Your project title.</h1>
-            <p>A polar research project spanning five countries, organized by <strong>Richard Fraser</strong> and supported by our research partners.</p>
+            <h1 id="hero-title">Sustainable Species<br/>in the Arctic.</h1>
+            <p>Exploring environmental conflicts with researchers, local and Indigenous communities, and artists across Norway, Finland and Greenland.</p>
           </div>
 
           <div class="story-details" id="story-details">
             <div class="eyebrow story-accent" aria-hidden="true"><span class="eyebrow-line"></span></div>
-            <h2>Research beyond<br /><em>borders.</em></h2>
-            <p class="story-description">A polar research project spanning five countries, organized by <strong>Richard Fraser</strong> and supported by our research partners.</p>
-            <div class="story-facts" aria-label="Project at a glance">
-              <div><span aria-label="Count to be confirmed">—</span><small>PUBLISHED ARTICLES</small></div>
-              <div><span aria-label="Count to be confirmed">—</span><small>IMAGES</small></div>
-              <div><span aria-label="Count to be confirmed">—</span><small>VIDEOS</small></div>
-            </div>
-          </div>
+            <h2>Towards shared<br /><em>Arctic futures.</em></h2>
+            <p class="story-description">We bring anthropology, ecology, genetics, technology and art into dialogue to co-create knowledge for more sustainable multispecies futures.</p>
+            <div class="story-facts" aria-label="Project at a glance"><div><span>3</span><small>RESEARCH REGIONS</small></div><div><span>7</span><small>SPECIES</small></div><div><span>1</span><small>SHARED ARCTIC</small></div></div>
+</div>
 
           <div class="hero-foot">
             <span>Scroll to explore <span class="scroll-arrow" aria-hidden="true">↓</span></span>
@@ -67,25 +48,12 @@
           <section class="polar-section section-wrap" id="polar-map" aria-labelledby="polar-title">
           <div class="polar-heading">
             <div class="polar-heading-spacer" aria-hidden="true"></div>
-            <h2 id="polar-title">Click the pin<br /><em>to discover<br />with the team.</em></h2>
+            <h2 id="polar-title">Three regions.<br/><em>Connected lives.</em></h2>
           </div>
           <figure class="polar-map">
             <div class="polar-map-wrap">
-              <img src="./assets/arctic-polar-map.svg" alt="North-polar map centered on the Arctic Ocean, showing the surrounding northern landmasses" loading="lazy" />
-              <button class="animal-pin" type="button" data-pin="bear" style="--pin-x: 38%; --pin-y: 46%" aria-label="Explore the polar bear demonstration project" aria-controls="polar-bear-project" aria-expanded="false"><img src="./assets/polar-bear-pin.png" alt="" /></button>
-              <button class="animal-pin" type="button" data-pin="fox" style="--pin-x: 66%; --pin-y: 63%" aria-label="Explore the Arctic fox demonstration project" aria-controls="arctic-fox-project" aria-expanded="false"><img src="./assets/arctic-fox-pin.png" alt="" /></button>
-              <section class="pin-popup" id="polar-bear-project" role="dialog" aria-modal="false" aria-labelledby="polar-bear-title" hidden>
-                <button class="pin-popup-close" type="button" aria-label="Close polar bear project">×</button>
-                <span class="pin-popup-kicker">DEMONSTRATION PROJECT 01</span>
-                <h3 id="polar-bear-title">Polar bear &amp; sea ice</h3>
-                <p>This sample project explores how field observations could document polar bear movement and sea-ice habitat. A full project page could bring together methods, photographs, route maps, and research updates.</p>
-              </section>
-              <section class="pin-popup" id="arctic-fox-project" role="dialog" aria-modal="false" aria-labelledby="arctic-fox-title" hidden>
-                <button class="pin-popup-close" type="button" aria-label="Close Arctic fox project">×</button>
-                <span class="pin-popup-kicker">DEMONSTRATION PROJECT 02</span>
-                <h3 id="arctic-fox-title">Arctic fox &amp; tundra</h3>
-                <p>This sample project shows how seasonal field records could follow Arctic foxes across tundra habitats. Its future archive could combine observation notes, images, local context, and environmental data.</p>
-              </section>
+              <img src="./assets/arctic-polar-map.svg" alt="North-polar map centered on the Arctic Ocean, showing the surrounding northern landmasses" loading="lazy" /><svg class="map-callouts" viewBox="0 0 1000 1000" aria-hidden="true"><line x1="580.8" y1="330.7" x2="540.0" y2="250.0"/><circle cx="580.8" cy="330.7" r="5"/><line x1="592.2" y1="297.7" x2="740.0" y2="430.0"/><circle cx="592.2" cy="297.7" r="5"/><line x1="400.3" y1="357.6" x2="400.3" y2="357.6"/><circle cx="400.3" cy="357.6" r="5"/></svg><button class="animal-pin region-pin" type="button" data-pin="norway" style="--pin-x:54.0%;--pin-y:25.0%" aria-label="Explore Norway · Sápmi" aria-controls="norway-project" aria-expanded="false"><span>NO</span></button><section class="pin-popup" id="norway-project" role="dialog" aria-modal="false" aria-labelledby="norway-title" hidden><button class="pin-popup-close" type="button" aria-label="Close Norway · Sápmi">×</button><span class="pin-popup-kicker">SPECIES · RESEARCH REGION</span><h3 id="norway-title">Norway · Sápmi</h3><p>Reindeer, king crabs and wild ducks. Explore the people, methods and questions connecting these cases.</p><a class="pin-link" href="./cases.html?region=norway">Explore the cases →</a></section><button class="animal-pin region-pin" type="button" data-pin="finland" style="--pin-x:74.0%;--pin-y:43.0%" aria-label="Explore Finland" aria-controls="finland-project" aria-expanded="false"><span>FI</span></button><section class="pin-popup" id="finland-project" role="dialog" aria-modal="false" aria-labelledby="finland-title" hidden><button class="pin-popup-close" type="button" aria-label="Close Finland">×</button><span class="pin-popup-kicker">SPECIES · RESEARCH REGION</span><h3 id="finland-title">Finland</h3><p>Baltic seals and Lapland cattle. Explore the people, methods and questions connecting these cases.</p><a class="pin-link" href="./cases.html?region=finland">Explore the cases →</a></section><button class="animal-pin region-pin" type="button" data-pin="greenland" style="--pin-x:40.0%;--pin-y:35.8%" aria-label="Explore Greenland" aria-controls="greenland-project" aria-expanded="false"><span>GL</span></button><section class="pin-popup" id="greenland-project" role="dialog" aria-modal="false" aria-labelledby="greenland-title" hidden><button class="pin-popup-close" type="button" aria-label="Close Greenland">×</button><span class="pin-popup-kicker">SPECIES · RESEARCH REGION</span><h3 id="greenland-title">Greenland</h3><p>Polar bears and muskoxen. Explore the people, methods and questions connecting these cases.</p><a class="pin-link" href="./cases.html?region=greenland">Explore the cases →</a></section>
+              
             </div>
           </figure>
           </section>
@@ -98,71 +66,29 @@
               <h2>Team members.</h2>
               <a href="./team.html">More information <span aria-hidden="true">↗</span></a>
             </div>
-            <div class="team-viewport"><div class="team-row">
-              <article class="team-card">
-                <div class="team-photo" role="img" aria-label="Portrait placeholder for Richard Fraser"><span class="portrait-head" aria-hidden="true"></span><span class="portrait-shoulders" aria-hidden="true"></span></div>
-                <h2>Richard Fraser</h2><p>Organizer</p>
-              </article>
-              <article class="team-card">
-                <div class="team-photo" role="img" aria-label="Portrait placeholder for team member two"><span class="portrait-head" aria-hidden="true"></span><span class="portrait-shoulders" aria-hidden="true"></span></div>
-                <h2>Team member 02</h2><p>Title to be added</p>
-              </article>
-              <article class="team-card">
-                <div class="team-photo" role="img" aria-label="Portrait placeholder for team member three"><span class="portrait-head" aria-hidden="true"></span><span class="portrait-shoulders" aria-hidden="true"></span></div>
-                <h2>Team member 03</h2><p>Title to be added</p>
-              </article>
-              <article class="team-card">
-                <div class="team-photo" role="img" aria-label="Portrait placeholder for team member four"><span class="portrait-head" aria-hidden="true"></span><span class="portrait-shoulders" aria-hidden="true"></span></div>
-                <h2>Team member 04</h2><p>Title to be added</p>
-              </article>
-            </div></div>
+            <div class="team-viewport"><div class="team-row"><article class="team-card"><a class="team-photo" href="./team.html#richard-fraser" aria-label="Read about Richard Fraser"><div class="person-monogram" aria-hidden="true">RF</div></a><h2><a href="./team.html#richard-fraser">Richard Fraser</a></h2><p>Project leadership · King crabs</p></article><article class="team-card"><a class="team-photo" href="./team.html#floris-van-beest" aria-label="Read about Floris M. van Beest"><img class="person-image" src="./assets/species/floris-van-beest.webp" alt="Floris M. van Beest" loading="lazy"/></a><h2><a href="./team.html#floris-van-beest">Floris M. van Beest</a></h2><p>Senior Researcher · Animal ecology</p></article><article class="team-card"><a class="team-photo" href="./team.html#benjamin-dupuis" aria-label="Read about Benjamin Dupuis"><img class="person-image" src="./assets/species/benjamin-dupuis.webp" alt="Benjamin Dupuis" loading="lazy"/></a><h2><a href="./team.html#benjamin-dupuis">Benjamin Dupuis</a></h2><p>Postdoctoral researcher · Ecological modelling</p></article><article class="team-card"><a class="team-photo" href="./team.html#heidi-konttinen" aria-label="Read about Heidi Konttinen"><img class="person-image" src="./assets/species/heidi-winter.webp" alt="Heidi Konttinen" loading="lazy"/></a><h2><a href="./team.html#heidi-konttinen">Heidi Konttinen</a></h2><p>Doctoral research · Seal-related material practices</p></article><article class="team-card"><a class="team-photo" href="./team.html#juha-kantanen" aria-label="Read about Juha Kantanen"><img class="person-image" src="./assets/species/juha-kantanen.webp" alt="Juha Kantanen" loading="lazy"/></a><h2><a href="./team.html#juha-kantanen">Juha Kantanen</a></h2><p>Professor of Livestock Genomics</p></article></div></div>
           </div>
         </section>
 
-        <section class="projects section-wrap" id="projects" aria-labelledby="projects-title">
-          <div class="section-heading">
-            <div><div class="section-meta"><span>PROJECT SHOWCASE</span></div><h2 id="projects-title">Grounded in the field</h2></div>
-          </div>
-          <div class="project-grid">
-            <article class="project-card project-card-featured">
-              <div><span class="card-kicker">ENVIRONMENT</span><h3>Glaciers &amp; observation</h3><p>Field imagery, research methods, and traces of environmental change.</p></div>
-            </article>
-            <article class="project-card">
-              <div><span class="card-kicker">PEOPLE &amp; PLACE</span><h3>People &amp; place</h3><p>Field materials on local experience, ways of life, and knowledge passed on.</p></div>
-            </article>
-            <article class="project-card">
-              <div><span class="card-kicker">VISUAL ARCHIVE</span><h3>A visual archive</h3><p>Images, sound, and research writing gathered into an accessible archive.</p></div>
-            </article>
-          </div>
-        </section>
+        <section class="home-about section-wrap" aria-labelledby="vision-title"><div><span class="team-page-kicker">THE PROJECT</span><h2 id="vision-title">How do we<br/><em>live together?</em></h2></div><div><p>Across the Arctic, relationships between people, animals and landscapes are changing. SPECIES brings different forms of knowledge into dialogue to explore environmental conflict, cultural practices and more sustainable shared futures.</p><a class="text-link" href="./about.html">Our questions and approach ↗</a></div></section><section class="projects section-wrap" id="projects" aria-labelledby="projects-title"><div class="section-heading"><div><div class="section-meta"><span>CASE STUDIES</span></div><h2 id="projects-title">Seven species.<br/>Many ways of knowing.</h2></div><a class="text-link" href="./cases.html">Explore every case ↗</a></div><div class="home-case-grid"><article class="case-tile" data-region="norway" data-filter-item>
+      <a class="case-art " href="./case-reindeer.html" tabindex="-1" aria-hidden="true"><span class="case-number" aria-hidden="true">01</span><span class="case-art-name" aria-hidden="true">Reindeer</span></a>
+      <div class="case-copy"><span class="team-page-kicker">Norway · Sápmi</span><h2><a href="./case-reindeer.html">Reindeer <span aria-hidden="true">↗</span></a></h2><h3>Herding, technology and Sámi knowledge</h3><p>Exploring how drone technology can support reindeer herding while respecting Sámi knowledge, animals and landscapes.</p><div class="tags"><span>Sámi knowledge</span><span>Herding</span><span>Technology</span></div></div></article><article class="case-tile" data-region="norway" data-filter-item>
+      <a class="case-art " href="./case-king-crabs.html" tabindex="-1" aria-hidden="true"><span class="case-number" aria-hidden="true">02</span><span class="case-art-name" aria-hidden="true">King crabs</span></a>
+      <div class="case-copy"><span class="team-page-kicker">Norway · Sápmi</span><h2><a href="./case-king-crabs.html">King crabs <span aria-hidden="true">↗</span></a></h2><h3>Fisheries, livelihoods and global markets</h3><p>Following the connections between Arctic fisheries, marine ecosystems, local livelihoods and international markets.</p><div class="tags"><span>Fisheries</span><span>Marine ecology</span><span>Global markets</span></div></div></article><article class="case-tile" data-region="norway" data-filter-item>
+      <a class="case-art " href="./case-wild-ducks.html" tabindex="-1" aria-hidden="true"><span class="case-number" aria-hidden="true">03</span><span class="case-art-name" aria-hidden="true">Wild ducks</span></a>
+      <div class="case-copy"><span class="team-page-kicker">Norway · Sápmi</span><h2><a href="./case-wild-ducks.html">Wild ducks <span aria-hidden="true">↗</span></a></h2><h3>A collaboration between research and art</h3><p>Wild ducks are one of the seven species in SPECIES, bringing research into dialogue with Sámi artistic practice.</p><div class="tags"><span>Art</span><span>Multispecies relations</span></div></div></article><article class="case-tile" data-region="finland" data-filter-item>
+      <a class="case-art " href="./case-seals.html" tabindex="-1" aria-hidden="true"><img src="./assets/species/seal-skins.webp" alt="Stacks of seal skins beside larger animal hides in a workshop" loading="lazy"/></a>
+      <div class="case-copy"><span class="team-page-kicker">Finland</span><h2><a href="./case-seals.html">Baltic seals <span aria-hidden="true">↗</span></a></h2><h3>Hunting, tradition and changing marine relations</h3><p>Learning with coastal communities about the relationships between people, seals, fish and the sea.</p><div class="tags"><span>Traditional knowledge</span><span>Fishing and hunting</span><span>Marine relations</span></div></div></article><article class="case-tile" data-region="finland" data-filter-item>
+      <a class="case-art " href="./case-lapland-cattle.html" tabindex="-1" aria-hidden="true"><img src="./assets/species/finncattle-pasture.webp" alt="White Northern Finncattle grazing together in a green pasture" loading="lazy"/></a>
+      <div class="case-copy"><span class="team-page-kicker">Finland</span><h2><a href="./case-lapland-cattle.html">Lapland cattle <span aria-hidden="true">↗</span></a></h2><h3>Genetic heritage and Arctic resilience</h3><p>Connecting the cultural value of Northern Finncattle with research into adaptation, resilience and genetic conservation.</p><div class="tags"><span>Genetic conservation</span><span>Arctic adaptation</span><span>Farming</span></div></div></article><article class="case-tile" data-region="greenland" data-filter-item>
+      <a class="case-art " href="./case-polar-bears.html" tabindex="-1" aria-hidden="true"><span class="case-number" aria-hidden="true">06</span><span class="case-art-name" aria-hidden="true">Polar bears</span></a>
+      <div class="case-copy"><span class="team-page-kicker">Greenland</span><h2><a href="./case-polar-bears.html">Polar bears <span aria-hidden="true">↗</span></a></h2><h3>Predation, climate change and food security</h3><p>Exploring changing encounters between polar bears and people, and their connections to hunting, safety and food security.</p><div class="tags"><span>Climate change</span><span>Food security</span><span>Human–animal relations</span></div></div></article><article class="case-tile" data-region="greenland" data-filter-item>
+      <a class="case-art is-diagram" href="./case-muskoxen.html" tabindex="-1" aria-hidden="true"><img src="./assets/species/muskox-model.png" alt="Working conceptual diagram connecting muskox foraging, energy reserves, movement costs and reproduction" loading="lazy"/></a>
+      <div class="case-copy"><span class="team-page-kicker">Greenland</span><h2><a href="./case-muskoxen.html">Muskoxen <span aria-hidden="true">↗</span></a></h2><h3>Modelling sustainable coexistence</h3><p>Bringing ecological modelling, anthropology and Inuit knowledge together to explore sustainable muskox management.</p><div class="tags"><span>Ecological modelling</span><span>Co-creation</span><span>Wildlife management</span></div></div></article></div></section><section class="editorial-section home-notes"><div class="editorial-heading"><span class="team-page-kicker">FROM THE FIELD</span><h2>Research taking shape.</h2></div><div class="story-grid"><article class="story-card" data-filter-item data-region="seals"><span class="team-page-kicker">Field story · Finland</span><p class="story-period">Spring–summer 2026</p><h2><a href="./note-ajos.html">People, seals and salmon in Ajos <span aria-hidden="true">↗</span></a></h2><p>On fishing boats in the Bothnian Bay, the fieldwork team learns how people negotiate everyday relationships with seals and salmon.</p><a class="text-link" href="./case-seals.html">Baltic seals case →</a></article><article class="story-card" data-filter-item data-region="muskoxen"><span class="team-page-kicker">Research update · Greenland</span><p class="story-period">WP3 project update · 2026 materials</p><h2><a href="./note-muskox-model.html">From movement to muskox populations <span aria-hidden="true">↗</span></a></h2><p>A research visit to Winnipeg helped the WP3 team develop the connection between animal movement, energy budgets and population change.</p><a class="text-link" href="./case-muskoxen.html">Muskoxen case →</a></article><article class="story-card" data-filter-item data-region="lapland-cattle"><span class="team-page-kicker">Research update · Finland</span><p class="story-period">September 2026</p><h2><a href="./note-genomics.html">Reading Arctic adaptation in the genome <span aria-hidden="true">↗</span></a></h2><p>The Luke team combines genomic and gene-expression data to investigate the resilience of northern livestock breeds.</p><a class="text-link" href="./case-lapland-cattle.html">Lapland cattle case →</a></article></div><a class="text-link" href="./field-notes.html">All field notes ↗</a></section>
 
-        <section class="partners-section section-wrap" id="partners" aria-labelledby="partners-title">
-          <div class="partners-heading">
-            <span class="partners-kicker">PARTNERSHIPS</span>
-            <h2 id="partners-title">Our partners.</h2>
-            <p>Universities and supporters contributing to the project.</p>
-          </div>
-          <div class="partner-group" aria-labelledby="university-partners-title">
-            <h3 id="university-partners-title">Partner universities</h3>
-            <div class="partner-logo-grid">
-              <div class="partner-logo-slot" aria-label="University logo to be added"><span aria-hidden="true">◇</span><small>UNIVERSITY LOGO</small></div>
-              <div class="partner-logo-slot" aria-label="University logo to be added"><span aria-hidden="true">◇</span><small>UNIVERSITY LOGO</small></div>
-              <div class="partner-logo-slot" aria-label="University logo to be added"><span aria-hidden="true">◇</span><small>UNIVERSITY LOGO</small></div>
-              <div class="partner-logo-slot" aria-label="University logo to be added"><span aria-hidden="true">◇</span><small>UNIVERSITY LOGO</small></div>
-            </div>
-          </div>
-          <div class="partner-group" aria-labelledby="supporters-title">
-            <h3 id="supporters-title">Sponsors &amp; supporters</h3>
-            <div class="partner-logo-grid">
-              <div class="partner-logo-slot" aria-label="Sponsor logo to be added"><span aria-hidden="true">◇</span><small>SPONSOR LOGO</small></div>
-              <div class="partner-logo-slot" aria-label="Sponsor logo to be added"><span aria-hidden="true">◇</span><small>SPONSOR LOGO</small></div>
-              <div class="partner-logo-slot" aria-label="Sponsor logo to be added"><span aria-hidden="true">◇</span><small>SPONSOR LOGO</small></div>
-              <div class="partner-logo-slot" aria-label="Sponsor logo to be added"><span aria-hidden="true">◇</span><small>SPONSOR LOGO</small></div>
-            </div>
-          </div>
-        </section>
+        <section class="partners-section section-wrap" id="partners" aria-labelledby="partners-title"><div class="partners-heading"><span class="partners-kicker">COLLABORATION</span><h2 id="partners-title">Connected through research.</h2><p>Institutions named in the project materials, working alongside local and Indigenous partners and artists.</p></div><div class="institution-grid"><div><h3>UiT</h3><p>Project leadership · Norway</p></div><div><h3>University of Lapland</h3><p>Anthropology · Finland</p></div><div><h3>Luke</h3><p>Genomics · Finland</p></div><div><h3>Aarhus University</h3><p>Ecology · Greenland cases</p></div><div><h3>Aalborg University</h3><p>Anthropology · Greenland cases</p></div><div><h3>Cambridge</h3><p>Reindeer case</p></div><div><h3>NIVA</h3><p>King crab case</p></div></div></section>
 
-        <footer class="home-footer section-wrap"><span>Between Ice and Light · Arctic Research</span><a href="#top">Back to top ↑</a></footer>
+        <footer class="home-footer section-wrap"><span>SPECIES · Sustainable Species in the Arctic</span><a href="#top">Back to top ↑</a></footer>
       </main>
     </div>
     <script src="./story.js" defer></script>
