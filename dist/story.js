@@ -2,7 +2,6 @@ const track = document.querySelector('.story-track');
 const intro = document.querySelector('.story-intro');
 const details = document.querySelector('.story-details');
 const colorWash = document.querySelector('.story-color-wash');
-const heroNav = document.querySelector('.story-stage .glass-nav');
 const heroFoot = document.querySelector('.story-stage .hero-foot');
 const polarSection = document.querySelector('.polar-section');
 const polarHeading = document.querySelector('.polar-heading');
@@ -55,7 +54,6 @@ function updateStory() {
     intro.removeAttribute('style');
     details.removeAttribute('style');
     colorWash.removeAttribute('style');
-    heroNav.removeAttribute('style');
     heroFoot.removeAttribute('style');
     polarSection.removeAttribute('style');
     polarHeading.removeAttribute('style');
@@ -84,8 +82,6 @@ function updateStory() {
   details.style.transform = `translate3d(0, ${(70 * (1 - detailEnter) - 80 * detailExit).toFixed(1)}px, 0)`;
   details.style.pointerEvents = detailOpacity > .9 ? 'auto' : 'none';
   colorWash.style.opacity = washEnter.toFixed(3);
-  heroNav.style.opacity = (1 - washEnter).toFixed(3);
-  heroNav.style.pointerEvents = washEnter > .9 ? 'none' : 'auto';
   heroFoot.style.opacity = (1 - washEnter).toFixed(3);
   polarSection.style.pointerEvents = pinsEnter > .9 ? 'auto' : 'none';
   polarMap.style.opacity = mapEnter.toFixed(3);
