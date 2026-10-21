@@ -1,5 +1,7 @@
 .polar-basemap { display:block; width:100%; height:auto; filter:drop-shadow(0 24px 65px #00050c61); }
 .story-track { overflow-anchor:none; }
+.story-stage .polar-section { grid-template-columns:minmax(250px,.6fr) minmax(440px,1.4fr); gap:clamp(20px,3vw,55px); padding-top:85px; padding-bottom:25px; }
+.story-stage .polar-map-wrap { width:min(100%,800px,calc(100svh - 110px)); }
 .story-stage .polar-basemap { opacity:0; will-change:opacity,transform; }
 .map-country { cursor:help; transition:fill .25s,stroke .25s; }
 .map-country.is-hovered, .map-country:focus-visible { fill:#e5eee2; stroke:#173c44; stroke-width:2.5; outline:none; }

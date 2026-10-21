@@ -34,3 +34,5 @@ To preview locally, run `node preview-server.mjs` in this directory and open `ht
 ## Arctic map
 
 Run `node generate-map.mjs` followed by `python build-species.py` to regenerate the country geometry and seven species pins. `map_content.py` maintains representative geographic anchors and the separate button positions joined by leader lines. Muskoxen includes Kangerlussuaq and Zackenberg. These points describe research settings, not species ranges or precise field sites. Country geometry uses Natural Earth 1:50m Admin 0 (public domain): https://www.naturalearthdata.com/downloads/50m-cultural-vectors/. Greenland is labelled as part of the Kingdom of Denmark. `dist/map.css` and `dist/map.js` provide country highlighting, fading labels, and species navigation.
+
+The map magnifies the Greenland–Fennoscandia research sector by 2.15× within the circular frame. The focus is (450, 360) in the original polar projection; both country geometry and geographic anchors apply this same transform. Offscreen country polygons are omitted and species buttons use separate, spaced display positions.
