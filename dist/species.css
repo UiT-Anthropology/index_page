@@ -119,6 +119,9 @@ button:focus-visible { outline:2px solid #a9e1d8; outline-offset:5px; }
 .story-stage .pin-popup { top:26%; padding-top:85px; max-height:calc(100svh - 150px); overflow-y:auto; }
 .animal-pin.is-featured { top:26%; width:90px; }
 .story-intro h1 { font-size:clamp(44px,5.4vw,84px); }
+@media (prefers-reduced-motion:no-preference) {
+  .story-details { top:var(--story-detail-top,30vh); bottom:auto; }
+}
 .story-stage .hero-image { /* Conceptual opening artwork, not a field photograph. */ background-position:center 53%; }
 @media(max-width:1000px) { .people-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .home-case-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .article-layout { grid-template-columns:minmax(0,1fr) 230px; gap:35px; } .home-notes .story-grid { grid-template-columns:1fr; } }
 @media(max-width:700px) {

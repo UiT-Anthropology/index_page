@@ -26,6 +26,14 @@ let teamDistance = 0;
 let teamTravel = 1;
 
 function layoutTeam() {
+  // Align both chapter headings by their top edge, regardless of copy height.
+  if (!reduceMotion.matches) {
+    const titleTop = intro.offsetTop + intro.querySelector('h1').offsetTop;
+    const detailTitleOffset = details.querySelector('h2').offsetTop;
+    track.style.setProperty('--story-detail-top', `${titleTop - detailTitleOffset}px`);
+  } else {
+    track.style.removeProperty('--story-detail-top');
+  }
   if (reduceMotion.matches || teamCards.length < 2) {
     teamSection.style.removeProperty('height');
     teamRow.style.removeProperty('transform');
@@ -84,7 +92,7 @@ function updateStory() {
   details.style.transform = `translate3d(0, ${(70 * (1 - detailEnter) - 80 * detailExit).toFixed(1)}px, 0)`;
   details.style.pointerEvents = detailOpacity > .9 ? 'auto' : 'none';
   colorWash.style.opacity = washEnter.toFixed(3);
-  heroFoot.style.opacity = (1 - washEnter).toFixed(3);
+  heroFoot.style.opacity = (1 - introExit).toFixed(3);
   polarSection.style.pointerEvents = pinsEnter > .9 ? 'auto' : 'none';
   polarMap.style.opacity = mapEnter.toFixed(3);
   if (mapCallouts) mapCallouts.style.opacity = mapEnter.toFixed(3);
