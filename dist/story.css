@@ -13,19 +13,7 @@
   letter-spacing: .04em;
 }
 .site-shell { overflow: clip; }
-:root { --site-nav-height: 72px; }
-html { scroll-padding-top: calc(var(--site-nav-height) + 16px); }
 .skip-link { z-index: 30; }
-/* Keep navigation pinned across every section, after the opening logo. */
-.site-nav {
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  width: 100%;
-  height: var(--site-nav-height);
-  margin: 0 0 calc(0px - var(--site-nav-height));
-  background: rgba(6, 22, 34, .86);
-}
 .brand-strip {
   height: 78px;
   display: flex;
@@ -318,7 +306,6 @@ html { scroll-padding-top: calc(var(--site-nav-height) + 16px); }
   .team-viewport { left: 34vw; }
 }
 @media (max-width: 620px) {
-  :root { --site-nav-height: 66px; }
   .glass-nav a { font-size: 14px; letter-spacing: 0; }
   .brand-strip { height: 68px; }
   .brand-placeholder { gap: 10px; font-size: 9px; }

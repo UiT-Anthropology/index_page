@@ -9,17 +9,32 @@
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet" href="./story.css" />
     <link rel="stylesheet" href="./team-page.css" />
+    <link rel="stylesheet" href="./header.css" />
+    <script src="./header.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to main content</a>
-    <div class="site-shell team-page-shell">
-      <div class="brand-strip"><a class="brand-placeholder" href="./index.html" aria-label="Back to home"><span class="brand-placeholder-mark" aria-hidden="true">◇</span><span>PROJECT LOGO</span></a></div>
-      <header class="team-page-header">
-        <nav class="glass-nav" aria-label="Main navigation">
+    <div class="site-shell team-page-shell" id="top">
+      <header class="site-header">
+        <a class="brand-placeholder header-brand" href="./index.html" aria-label="Arctic Research home"><span class="brand-placeholder-mark" aria-hidden="true">◇</span><span>PROJECT LOGO</span></a>
+        <nav class="header-links" aria-label="Main navigation">
           <a href="./index.html#projects">Project Showcase</a>
           <a href="./team.html" aria-current="page">The Team</a>
           <a href="./multimedia.html">Multimedia</a>
           <a href="./field-notes.html">Field Notes</a>
+        </nav>
+        <button class="header-menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="header-menu">
+          <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+        </button>
+        <nav class="header-menu" id="header-menu" aria-label="All navigation" hidden>
+          <span class="header-menu-title">Explore</span>
+          <a href="./index.html">Home</a>
+          <a href="./index.html#projects">Project Showcase</a>
+          <a href="./team.html" aria-current="page">The Team</a>
+          <a href="./multimedia.html">Multimedia</a>
+          <a href="./field-notes.html">Field Notes</a>
+
+          <a href="./index.html#partners">Our partners</a>
         </nav>
       </header>
       <main id="main">

@@ -10,19 +10,34 @@
     <link rel="stylesheet" href="./layout.css" />
     <link rel="stylesheet" href="./story.css" />
     <link rel="stylesheet" href="./partners.css" />
+    <link rel="stylesheet" href="./header.css" />
+    <script src="./header.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to main content</a>
-    <div class="site-shell">
-      <div class="brand-strip" id="top">
-        <div class="brand-placeholder"><span class="brand-placeholder-mark" aria-hidden="true">◇</span><span>PROJECT LOGO</span></div>
-      </div>
-      <nav class="glass-nav site-nav" aria-label="Main navigation">
-        <a href="#projects">Project Showcase</a>
-        <a href="./team.html">The Team</a>
-        <a href="./multimedia.html">Multimedia</a>
-        <a href="./field-notes.html">Field Notes</a>
-      </nav>
+    <div class="site-shell" id="top">
+      <header class="site-header">
+        <a class="brand-placeholder header-brand" href="#top" aria-label="Arctic Research home"><span class="brand-placeholder-mark" aria-hidden="true">◇</span><span>PROJECT LOGO</span></a>
+        <nav class="header-links" aria-label="Main navigation">
+          <a href="#projects">Project Showcase</a>
+          <a href="./team.html">The Team</a>
+          <a href="./multimedia.html">Multimedia</a>
+          <a href="./field-notes.html">Field Notes</a>
+        </nav>
+        <button class="header-menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="header-menu">
+          <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+        </button>
+        <nav class="header-menu" id="header-menu" aria-label="All navigation" hidden>
+          <span class="header-menu-title">Explore</span>
+          <a href="./index.html" aria-current="page">Home</a>
+          <a href="#projects">Project Showcase</a>
+          <a href="./team.html">The Team</a>
+          <a href="./multimedia.html">Multimedia</a>
+          <a href="./field-notes.html">Field Notes</a>
+
+          <a href="#partners">Our partners</a>
+        </nav>
+      </header>
       <main id="main">
         <section class="story-track" aria-label="Introduction to the Arctic research project">
         <div class="hero story-stage">
@@ -121,7 +136,7 @@
           </div>
         </section>
 
-        <section class="partners-section section-wrap" aria-labelledby="partners-title">
+        <section class="partners-section section-wrap" id="partners" aria-labelledby="partners-title">
           <div class="partners-heading">
             <span class="partners-kicker">PARTNERSHIPS</span>
             <h2 id="partners-title">Our partners.</h2>
