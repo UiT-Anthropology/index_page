@@ -1,2 +1,3 @@
 # Local visual QA exports
 review/
+__pycache__/

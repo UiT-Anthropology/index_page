@@ -5,7 +5,7 @@ const colorWash = document.querySelector('.story-color-wash');
 const heroFoot = document.querySelector('.story-stage .hero-foot');
 const polarSection = document.querySelector('.polar-section');
 const polarHeading = document.querySelector('.polar-heading');
-const polarMap = document.querySelector('.polar-map-wrap > img');
+const polarMap = document.querySelector('.polar-basemap');
 const mapCallouts = document.querySelector('.map-callouts');
 const polarPins = [...document.querySelectorAll('.animal-pin')];
 const teamSection = document.querySelector('.team-scroll');
@@ -72,6 +72,7 @@ function updateStory() {
       pin.style.removeProperty('opacity');
       pin.removeAttribute('tabindex');
     });
+    document.querySelectorAll('.map-country, [data-map-target]').forEach(element => element.tabIndex = 0);
     return;
   }
   const travel = Math.max(1, track.offsetHeight - window.innerHeight);
@@ -94,6 +95,12 @@ function updateStory() {
   colorWash.style.opacity = washEnter.toFixed(3);
   heroFoot.style.opacity = (1 - introExit).toFixed(3);
   polarSection.style.pointerEvents = pinsEnter > .9 ? 'auto' : 'none';
+  document.querySelectorAll('.map-country').forEach(country => {
+    country.tabIndex = pinsEnter > .9 ? 0 : -1;
+  });
+  document.querySelectorAll('[data-map-target]').forEach(button => {
+    button.tabIndex = pinsEnter > .9 ? 0 : -1;
+  });
   polarMap.style.opacity = mapEnter.toFixed(3);
   if (mapCallouts) mapCallouts.style.opacity = mapEnter.toFixed(3);
   polarMap.style.transform = `translate3d(0, ${(45 * (1 - mapEnter)).toFixed(1)}px, 0)`;
@@ -147,7 +154,10 @@ async function closePinPopup(restoreFocus = false) {
   pin.classList.remove('is-featured');
   pin.setAttribute('aria-expanded', 'false');
   openPin = null;
-  if (restoreFocus) pin.focus();
+  if (restoreFocus) {
+    const returnTarget = document.querySelector(`[data-map-target="${pin.dataset.pin}"]`) || pin;
+    returnTarget.focus({ preventScroll: true });
+  }
 }
 
 async function openPinPopup(pin) {
@@ -162,7 +172,7 @@ async function openPinPopup(pin) {
   popup.hidden = false;
   popup.classList.add('is-open');
   pin.setAttribute('aria-expanded', 'true');
-  popup.querySelector('.pin-popup-close').focus();
+  popup.querySelector('.pin-popup-close').focus({ preventScroll: true });
 }
 
 for (const pin of mapPins) {

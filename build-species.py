@@ -80,8 +80,7 @@ def filters(options, label):
     return f'<div class="filter-bar" role="group" aria-label="{e(label)}">' + ''.join(f'<button type="button" data-filter="{key}" aria-pressed="{str(i==0).lower()}">{e(name)}</button>' for i,(key,name) in enumerate(options)) + '</div><p class="filter-count" aria-live="polite" aria-atomic="true"></p>'
 
 def build_cases():
-    body = intro('THREE REGIONS · SEVEN SPECIES', 'Lives intertwined.', 'Explore environmental conflicts through the relationships between people, animals and their environments in Norway, Finland and Greenland.')
-    body += '<section class="editorial-section" aria-label="Case studies" data-filter-group>'
+    body = '<h1 class="sr-only">Case studies</h1><section class="editorial-section directory-section" aria-label="Case studies" data-filter-group>'
     body += filters([('all','All regions'),('norway','Norway · Sápmi'),('finland','Finland'),('greenland','Greenland')], 'Filter case studies by region')
     body += '<div class="case-directory">' + ''.join(case_card(c,n) for n,c in enumerate(DATA['cases'],1)) + '</div></section>'
     write('cases.html', page('Case studies','Seven species and three Arctic research regions.',body,'cases.html'))
@@ -103,8 +102,7 @@ def build_cases():
         write(f'case-{c["id"]}.html',page(c['name'],c['summary'],body,'cases.html'))
 
 def build_team():
-    body = intro('RESEARCH · COMMUNITIES · ART','Working together.', 'Anthropology, ecology, genetics, technology and artistic practice come together through collaboration with local and Indigenous partners.')
-    body += '<section class="editorial-section" data-filter-group aria-label="Project contributors">'
+    body = '<h1 class="sr-only">The team</h1><section class="editorial-section directory-section" data-filter-group aria-label="Project contributors">'
     body += filters([('all','All contributors'),('reindeer','Reindeer'),('king-crabs','King crabs'),('wild-ducks','Wild ducks'),('seals','Seals'),('lapland-cattle','Lapland cattle'),('polar-bears','Polar bears'),('muskoxen','Muskoxen')],'Filter contributors by case')
     body += '<div class="people-grid">'
     for p in DATA['people']:
@@ -112,12 +110,11 @@ def build_team():
         if p.get('orcid'):
             body += f'<a class="text-link" href="https://orcid.org/{p["orcid"]}">ORCID profile ↗</a>'
         body += '</div></article>'
-    body += '</div></section><section class="editorial-section collaboration-note"><span class="team-page-kicker">CO-CREATING KNOWLEDGE</span><h2>More than a directory.</h2><p>Local and Indigenous partners are active participants in framing questions, conducting fieldwork and identifying shared priorities. These relationships are central to SPECIES and extend beyond the individual contributors listed here.</p></section>'
+    body += '</div></section>'
     write('team.html',page('The team','Meet the researchers and artists contributing to SPECIES.',body,'team.html'))
 
 def build_stories():
-    body = intro('FIELDWORK · METHODS · EXCHANGE','Notes from the field.', 'Follow the practical work, encounters and conversations through which SPECIES research develops.')
-    body += '<section class="editorial-section" data-filter-group aria-label="Field notes and activities">' + filters([('all','All notes'),('seals','Baltic seals'),('muskoxen','Muskoxen'),('lapland-cattle','Lapland cattle')],'Filter notes by case')
+    body = '<h1 class="sr-only">Field notes</h1><section class="editorial-section directory-section" data-filter-group aria-label="Field notes and activities">' + filters([('all','All notes'),('seals','Baltic seals'),('muskoxen','Muskoxen'),('lapland-cattle','Lapland cattle')],'Filter notes by case')
     body += '<div class="story-grid">' + ''.join(story_card(s) for s in DATA['stories']) + '</div></section>'
     write('field-notes.html',page('Field notes','Field stories, research updates and activities from SPECIES.',body,'field-notes.html'))
     for s in DATA['stories']:
@@ -139,8 +136,7 @@ def build_media():
       ('lapland-cattle','finncattle-archive.webp','Northern Finncattle archive','A white Northern Finncattle cow in a wooded pasture','Photo: Luke Archive.'),
       ('muskoxen','muskox-model.png','Inside a developing model','Working diagram of muskox foraging, energy budgets, movement and reproduction','SPECIES WP3 working conceptual diagram; model development, not simulation results.'),
       ('seals','seal-skins.webp','Skins and material practices','Stacks of seal skins beside larger hides in a workshop','Supplied with the Finland fieldwork materials. Photographer and location not specified.')]
-    body = intro('PHOTOGRAPHY · RESEARCH DIAGRAMS','Ways of seeing.', 'Images and working research materials from the SPECIES collections, connected to the cases and stories they help explain.')
-    body += '<section class="editorial-section" data-filter-group aria-label="Media collection">' + filters([('all','All media'),('lapland-cattle','Lapland cattle'),('muskoxen','Muskoxen'),('seals','Seals')],'Filter media by case') + '<div class="media-grid">'
+    body = '<h1 class="sr-only">Multimedia</h1><section class="editorial-section directory-section" data-filter-group aria-label="Media collection">' + filters([('all','All media'),('lapland-cattle','Lapland cattle'),('muskoxen','Muskoxen'),('seals','Seals')],'Filter media by case') + '<div class="media-grid">'
     for cid,filename,title,alt,credit in media:
         body += f'<article class="media-tile" data-filter-item data-region="{cid}">{photo(filename,alt,credit,"diagram" if cid=="muskoxen" else "")}<h2>{e(title)}</h2><a class="text-link" href="./case-{cid}.html">{e(CASES[cid]["name"])} case →</a></article>'
     body += '</div></section><section class="editorial-section download-panel"><div><span class="team-page-kicker">FURTHER READING</span><h2>The Luke research update.</h2><p>Read the complete September 2026 contribution, including research descriptions, team biographies, activities and photographs.</p></div><a class="outline-link" href="./assets/species/luke-research-update.pdf" download>Download PDF · 938 KB ↓</a></section>'
@@ -177,24 +173,12 @@ def build_home():
     home = home.replace('Research beyond<br /><em>borders.</em>','Towards shared<br /><em>Arctic futures.</em>')
     home = re.sub(r'<div class="story-facts".*?</div>\s*</div>\s*</div>', '<div class="story-facts" aria-label="Project at a glance"><div><span>3</span><small>RESEARCH REGIONS</small></div><div><span>7</span><small>SPECIES</small></div><div><span>1</span><small>SHARED ARCTIC</small></div></div>\n</div>',home, count=1,flags=re.S)
     home = home.replace('Click the pin<br /><em>to discover<br />with the team.</em>','Three regions.<br/><em>Connected lives.</em>')
-    # Map positions use the same azimuthal projection as generate-map.mjs.
-    home = re.sub(r'<svg class="map-callouts".*?</svg>', '', home, flags=re.S)
-    # Remove either the old demo pins or a prior generated regional set.
-    home = re.sub(r'<button class="animal-pin region-pin".*?</section>', '', home, flags=re.S)
-    regions = [('norway','Norway · Sápmi',25.5,69.5,'Reindeer, king crabs and wild ducks','norway'),('finland','Finland',24.5,65.7,'Baltic seals and Lapland cattle','finland'),('greenland','Greenland',-35,71,'Polar bears and muskoxen','greenland')]
-    pins = []
-    callouts = []
-    for key,name,lon,lat,summary,filter_key in regions:
-        radius = (90-lat)*9.15
-        x,y = (500+radius*math.sin(math.radians(lon)))/10,(500-radius*math.cos(math.radians(lon)))/10
-        # Nearby Finland and Norway pins use callouts with projected endpoints.
-        px,py = (74,43) if key=='finland' else (54,25) if key=='norway' else (x,y)
-        callouts.append(f'<line x1="{x*10:.1f}" y1="{y*10:.1f}" x2="{px*10:.1f}" y2="{py*10:.1f}"/><circle cx="{x*10:.1f}" cy="{y*10:.1f}" r="5"/>')
-        pins.append(f'<button class="animal-pin region-pin" type="button" data-pin="{key}" style="--pin-x:{px:.1f}%;--pin-y:{py:.1f}%" aria-label="Explore {name}" aria-controls="{key}-project" aria-expanded="false"><span>{"NO" if key=="norway" else "FI" if key=="finland" else "GL"}</span></button><section class="pin-popup" id="{key}-project" role="dialog" aria-modal="false" aria-labelledby="{key}-title" hidden><button class="pin-popup-close" type="button" aria-label="Close {name}">×</button><span class="pin-popup-kicker">SPECIES · RESEARCH REGION</span><h3 id="{key}-title">{name}</h3><p>{summary}. Explore the people, methods and questions connecting these cases.</p><a class="pin-link" href="./cases.html?region={filter_key}">Explore the cases →</a></section>')
-    home = re.sub(r'<button class="animal-pin".*?</section>\s*<section class="pin-popup".*?</section>','',home,count=1,flags=re.S)
-    map_pattern = r'(<img src="\./assets/arctic-polar-map.svg"[^>]*>)'
-    map_overlay = '<svg class="map-callouts" viewBox="0 0 1000 1000" aria-hidden="true">'+''.join(callouts)+'</svg>'+''.join(pins)
-    home = re.sub(map_pattern,lambda m:m[1]+map_overlay,home,count=1)
+    # Generated geometry and species share the same projection and viewBox.
+    from map_content import build_map
+    map_body, map_legend = build_map(DATA['cases'])
+    home = re.sub(r'(<div class="polar-map-wrap">).*?(</div>\s*</figure>)', lambda m:m[1]+map_body+m[2], home, count=1, flags=re.S)
+    home = re.sub(r'<div class="map-legend">.*?</div><!-- /map-legend -->', '', home, flags=re.S)
+    home = home.replace('<h2 id="polar-title">Three regions.<br/><em>Connected lives.</em></h2>', '<h2 id="polar-title">Three regions.<br/><em>Connected lives.</em></h2>'+map_legend)
     # Use a representative selection of real contributors in the existing scroll scene.
     selection = ['richard-fraser','floris-van-beest','benjamin-dupuis','heidi-konttinen','juha-kantanen']
     cards = ''.join(f'<article class="team-card"><a class="team-photo" href="./team.html#{pid}" aria-label="Read about {e(PEOPLE[pid]["name"])}">{person_visual(PEOPLE[pid])}</a><h2><a href="./team.html#{pid}">{e(PEOPLE[pid]["name"])}</a></h2><p>{e(PEOPLE[pid]["role"])}</p></article>' for pid in selection)
@@ -209,10 +193,11 @@ def build_home():
     home = home.replace('Between Ice and Light · Arctic Research','SPECIES · Sustainable Species in the Arctic')
     write('index.html',home)
 
-build_cases()
-build_team()
-build_stories()
-build_media()
-build_about()
-build_home()
-print(f'Built homepage, 7 cases, {len(PEOPLE)} contributor profiles, {len(STORIES)} notes, about and media pages.')
+if __name__ == '__main__':
+    build_cases()
+    build_team()
+    build_stories()
+    build_media()
+    build_about()
+    build_home()
+    print(f'Built homepage, 7 cases, {len(PEOPLE)} contributor profiles, {len(STORIES)} notes, about and media pages.')
