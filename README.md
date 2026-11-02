@@ -6,7 +6,7 @@ A static research website using the project's supplied Drive materials. It inclu
 
 Edit `data/species.json`, then run `python build-species.py` and `python check-species.py`. The latter checks local links, fragments, image alternative text and remaining placeholders across the 27 pages. The homepage's existing layout is retained by the generator.
 
-The complete supplied Drive collection is available at `dist/resources.html`, with seven full-text source pages, original document downloads and all thirteen supplied photographs/diagrams. The build also regenerates the local file-to-page record in `DRIVE-CONTENT-RECORD.md`; see that file for provenance, image credits, checksums and maintenance instructions.
+The complete supplied Drive collection is available at `resources.html`, with seven full-text source pages, original document downloads and all thirteen supplied photographs/diagrams. The build also regenerates the local file-to-page record in `DRIVE-CONTENT-RECORD.md`; see that file for provenance, image credits, checksums and maintenance instructions.
 
 Use the bundled Python runtime with Pillow and pypdf to run `prepare-species-assets.py` when regenerating web images from the supplied originals. Credits are stored alongside the editorial content.
 
@@ -23,10 +23,10 @@ The fourth navigation item is **Field Notes**, intended for methods, field obser
 
 ## Files
 
-- `dist/index.html`: static page content
-- `dist/styles.css`: core styles
-- `dist/layout.css`: full-width four-panel glass navigation and English typography adjustments
-- `dist/assets/arctic-laser-hero.png`: conceptual image generated with the built-in image generation tool; it is not a photograph of a real field site
+- `index.html`: static page content
+- `styles.css`: core styles
+- `layout.css`: full-width four-panel glass navigation and English typography adjustments
+- `assets/arctic-laser-hero.png`: conceptual image generated with the built-in image generation tool; it is not a photograph of a real field site
 
 To preview locally, run `node preview-server.mjs` in this directory and open `http://127.0.0.1:8000`.
 
@@ -35,6 +35,6 @@ To preview locally, run `node preview-server.mjs` in this directory and open `ht
 
 ## Arctic map
 
-Run `node generate-map.mjs` followed by `python build-species.py` to regenerate the country geometry and seven species pins. `map_content.py` maintains representative geographic anchors and the separate button positions joined by leader lines. Muskoxen includes Kangerlussuaq and Zackenberg. These points describe research settings, not species ranges or precise field sites. Country geometry uses Natural Earth 1:50m Admin 0 (public domain): https://www.naturalearthdata.com/downloads/50m-cultural-vectors/. Greenland is labelled as part of the Kingdom of Denmark. `dist/map.css` and `dist/map.js` provide country highlighting, fading labels, and species navigation.
+Run `node generate-map.mjs` followed by `python build-species.py` to regenerate the country geometry and seven species pins. `map_content.py` maintains representative geographic anchors and the separate button positions joined by leader lines. Muskoxen includes Kangerlussuaq and Zackenberg. These points describe research settings, not species ranges or precise field sites. Country geometry uses Natural Earth 1:50m Admin 0 (public domain): https://www.naturalearthdata.com/downloads/50m-cultural-vectors/. Greenland is labelled as part of the Kingdom of Denmark. `map.css` and `map.js` provide country highlighting, fading labels, and species navigation.
 
 The map magnifies the Greenland–Fennoscandia research sector by 2.15× within the circular frame. The focus is (450, 360) in the original polar projection; both country geometry and geographic anchors apply this same transform. Offscreen country polygons are omitted and species buttons use separate, spaced display positions.

@@ -26,5 +26,5 @@ const svg=`<svg class="polar-basemap" xmlns="http://www.w3.org/2000/svg" viewBox
 <circle cx="500" cy="500" r="455" fill="url(#arctic-sea)" stroke="#749ca0" stroke-width="1.5"/>
 <g clip-path="url(#arctic-disc)"><g transform="${mapTransform}"><g fill="none" stroke="#a0c4c3" stroke-opacity=".16" stroke-width=".65">${grid}</g><g fill-rule="evenodd" stroke="#355b60" stroke-width=".9" stroke-linejoin="round">${countries}</g></g></g>
 <g fill="#a6c4c3" font-family="Outfit,Arial,sans-serif" font-size="13" letter-spacing="3" text-anchor="middle" pointer-events="none"><text x="607.5" y="770">ARCTIC OCEAN</text><text x="607.5" y="825" font-size="10" letter-spacing="2">90° N</text></g><path d="M600.5 801h14m-7-7v14" stroke="#a6c4c3" stroke-width="1" pointer-events="none"/></svg>`;
-writeFileSync(new URL('./dist/assets/arctic-polar-map.svg',import.meta.url),svg);
+writeFileSync(new URL('./assets/arctic-polar-map.svg',import.meta.url),svg);
 console.log(`Generated map with ${countries.split('data-country=').length-1} countries and territories.`);

@@ -5,7 +5,7 @@ from PIL import Image, ImageOps
 from pypdf import PdfReader
 
 ROOT = Path(__file__).resolve().parent
-ASSETS = ROOT / 'dist/assets/species'
+ASSETS = ROOT / 'assets/species'
 pdf = PdfReader(ASSETS / 'luke-research-update.pdf')
 # Images follow the biographies across page breaks in the original six-page PDF.
 mapping = {

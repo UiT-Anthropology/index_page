@@ -36,7 +36,7 @@ supplied originals and the six-page Luke PDF. Original media and the PDF are ret
 - Official project/institution logos, funding acknowledgement, and video/audio
   materials were not supplied in the original Drive set. The current homepage
   includes institution logos obtained separately; their sources are recorded in
-  `dist/assets/partners/sources.json`. No funding acknowledgement is inferred.
+  `assets/partners/sources.json`. No funding acknowledgement is inferred.
 - Modelling and the conservation toolkit are described as work in development.
   This release does not fabricate a runnable model, datasets or published results.
 - The homepage's existing conceptual illustration is retained, with descriptive

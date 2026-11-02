@@ -34,7 +34,7 @@ def actions(entry):
     return '<div class="library-actions">' + text + '</div>'
 
 for entry in entries:
-    path = ROOT / 'dist' / entry['file']
+    path = ROOT / entry['file']
     assert path.is_file(), path
     assert hashlib.sha256(path.read_bytes()).hexdigest() == entry['sha256'], f'Changed source: {path}'
     if not entry.get('page'):
@@ -76,7 +76,7 @@ body += '</div></section>'
 site.write('resources.html', site.page('Research materials', 'Complete SPECIES source documents, original photographs and research diagrams.', body, 'resources.html'))
 
 # Keep all generated pages discoverable even when the library is rebuilt on its own.
-for path in (ROOT / 'dist').glob('*.html'):
+for path in ROOT.glob('*.html'):
     text = path.read_text(encoding='utf-8')
     if 'href="./resources.html">Research materials</a>' not in text and path.name != 'resources.html':
         text = text.replace('<a href="./index.html#partners">', '<a href="./resources.html">Research materials</a><a href="./index.html#partners">')
@@ -93,19 +93,19 @@ lines = [
     '- ZIP 中的五项 __MACOSX 元数据保留在原 ZIP 内，不另作图片或文档展示。',
     '- Reindeer 与 King Crab 文件夹为空，记录为空目录，不制作虚构内容。', '',
     '## 文件对应表', '',
-    '下列路径均相对于仓库根目录；网站链接以 dist 为根。完整资料入口：[Research materials](dist/resources.html)。', '',
+    '下列路径均相对于仓库根目录；网站链接以仓库根目录为根。完整资料入口：[Research materials](resources.html)。', '',
     '| 来源文件或条目 | 内容介绍 | 来源目录 | 本地原件 | 全文阅读 | 内容使用页面 |',
     '|---|---|---|---|---|---|',
 ]
 for entry in entries:
     file = entry['file']
-    reading = f'[完整文本](dist/{entry["page"]})' if entry.get('page') else ('图片展示于资料库和 Multimedia' if entry['kind'] == 'image' else 'ZIP 可下载；内部文档和图片单独列出')
-    uses = '、'.join(f'[{url}](dist/{url})' for url in entry['uses'])
-    lines.append(f'| [{entry["title"]}]({inherited_url(entry)}) | {entry["description"]} | {entry["folder"]} | [原件](dist/{file}) | {reading} | {uses} |')
+    reading = f'[完整文本]({entry["page"]})' if entry.get('page') else ('图片展示于资料库和 Multimedia' if entry['kind'] == 'image' else 'ZIP 可下载；内部文档和图片单独列出')
+    uses = '、'.join(f'[{url}]({url})' for url in entry['uses'])
+    lines.append(f'| [{entry["title"]}]({inherited_url(entry)}) | {entry["description"]} | {entry["folder"]} | [原件]({file}) | {reading} | {uses} |')
 lines += ['', '## 图片与署名', '', '| 图片 | 原件 | 网页预览 | 来源及署名 |', '|---|---|---|---|']
 for entry in entries:
     if entry['kind'] == 'image':
-        lines.append(f'| {entry["title"]} | [下载](dist/{entry["file"]}) | [预览](dist/{preview(entry)}) | {entry["credit"]} |')
+        lines.append(f'| {entry["title"]} | [下载]({entry["file"]}) | [预览]({preview(entry)}) | {entry["credit"]} |')
 lines += [
     '', '## 内容整理方式', '',
     '- 原始 Word 全文转换为可阅读 HTML，保留段落顺序与文字；表格单元格按原始顺序展开为段落。原始 Word 下载保留版式。',
@@ -127,11 +127,11 @@ lines += [
 for entry in entries:
     lines.append(f'| {entry["key"]} | {entry["bytes"]} | {entry["sha256"]} |')
 lines += ['', '## 后续维护', '',
-          '- 结构化清单：data/drive-library.json；正文快照：data/drive-text/；原件：dist/assets/drive/。',
+          '- 结构化清单：data/drive-library.json；正文快照：data/drive-text/；原件：assets/drive/。',
           '- 修改案例、成员和札记：data/species.json。页面生成器：build-species.py，末尾自动调用 build-drive-library.py。',
           '- 仅重建资料库和本记录：python build-drive-library.py。',
           '- 更新原始资料后，可用包含 pypdf/Pillow 的 Python 运行 prepare-drive-library.py，再运行 python build-species.py。',
-          '- 原件准备脚本从 audit/main.docx、audit/florian.docx、audit/wp3.zip 与 dist/assets/drive/ 的其余文件重建清单；更新时同步替换相应输入。',
+          '- 原件准备脚本从 audit/main.docx、audit/florian.docx、audit/wp3.zip 与 assets/drive/ 的其余文件重建清单；更新时同步替换相应输入。',
           '- 检查：python check-species.py。资料库构建还会逐一核验清单中的文件 SHA-256。', '']
 (ROOT / 'DRIVE-CONTENT-RECORD.md').write_text('\n'.join(lines), encoding='utf-8')
 print('Built research library, 7 complete-text source pages and DRIVE-CONTENT-RECORD.md.')

@@ -11,7 +11,7 @@ import xml.etree.ElementTree as ET
 from pypdf import PdfReader
 
 ROOT = Path(__file__).resolve().parent
-ASSETS = ROOT / 'dist/assets/drive'
+ASSETS = ROOT / 'assets/drive'
 DATA = ROOT / 'data/drive-text'
 ASSETS.mkdir(parents=True, exist_ok=True)
 DATA.mkdir(parents=True, exist_ok=True)
@@ -87,7 +87,7 @@ ns = {'w': 'http://schemas.openxmlformats.org/wordprocessingml/2006/main'}
 for entry in entries:
     if not entry.get('page'):
         continue
-    file = ROOT / 'dist' / entry['file']
+    file = ROOT / entry['file']
     if file.suffix == '.docx':
         with zipfile.ZipFile(file) as archive:
             root = ET.fromstring(archive.read('word/document.xml'))

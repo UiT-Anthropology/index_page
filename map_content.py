@@ -28,7 +28,7 @@ def project(lon, lat):
     return 500+(500+r*math.sin(a)-450)*2.15, 500+(500-r*math.cos(a)-360)*2.15
 
 def build_map(cases):
-    base=Path('dist/assets/arctic-polar-map.svg').read_text(encoding='utf-8')
+    base=Path('assets/arctic-polar-map.svg').read_text(encoding='utf-8')
     callouts=[]; pins=[]; legend=[]
     for i,c in enumerate(cases,1):
         key=c['id']; lon,lat,px,py=SITES[key]

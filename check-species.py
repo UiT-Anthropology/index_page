@@ -4,7 +4,7 @@ from html.parser import HTMLParser
 from urllib.parse import urlsplit, unquote
 from collections import Counter
 
-ROOT = Path(__file__).resolve().parent / 'dist'
+ROOT = Path(__file__).resolve().parent
 class Document(HTMLParser):
     def __init__(self, text):
         super().__init__()

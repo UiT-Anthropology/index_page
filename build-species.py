@@ -9,7 +9,7 @@ import math
 import re
 
 ROOT = Path(__file__).resolve().parent
-DIST = ROOT / 'dist'
+DIST = ROOT
 DATA = json.loads((ROOT / 'data/species.json').read_text(encoding='utf-8'))
 CASES = {c['id']: c for c in DATA['cases']}
 PEOPLE = {p['id']: p for p in DATA['people']}
