@@ -34,7 +34,9 @@ supplied originals and the six-page Luke PDF. Original media and the PDF are ret
   The hides image is not labelled as a particular location or as a photograph of
   the events in the articles. Its photographer is not specified in the source.
 - Official project/institution logos, funding acknowledgement, and video/audio
-  materials were not supplied. Text institution names replace the old logo slots.
+  materials were not supplied in the original Drive set. The current homepage
+  includes institution logos obtained separately; their sources are recorded in
+  `dist/assets/partners/sources.json`. No funding acknowledgement is inferred.
 - Modelling and the conservation toolkit are described as work in development.
   This release does not fabricate a runnable model, datasets or published results.
 - The homepage's existing conceptual illustration is retained, with descriptive
@@ -43,7 +45,23 @@ supplied originals and the six-page Luke PDF. Original media and the PDF are ret
 ## Structure and verification
 
 The static output has a homepage, About, case directory, seven case pages, a
-contributor directory, media collection, field-notes index and six note pages.
+contributor directory, media collection, field-notes index, six note pages,
+a complete research-materials library and seven full-text source pages.
 Regions, contributors, notes and media can be filtered without hiding content from
 visitors with JavaScript disabled. Cases, contributors, media and notes cross-link.
 The existing shared header and homepage scroll animation are retained.
+
+## Complete local source collection (2026-11-02)
+
+All eight supplied Drive files are retained locally, including the test document
+as a text export. Five useful ZIP members and eight PDF images are also available
+separately. The original ZIP retains its Mac metadata. Full source transcriptions
+preserve details omitted from the edited stories, with the author and source
+period identified. Statements in original accounts remain attributable to those
+accounts rather than being presented as independently verified findings.
+
+See `DRIVE-CONTENT-RECORD.md` for the complete file-to-page mapping and image
+credits. Files referenced by the field report but absent from the supplied Drive
+collection remain listed as missing source materials. The current collection has
+no original fieldwork photographs beyond the supplied hides image, cattle images,
+portraits and working diagram.

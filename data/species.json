@@ -127,7 +127,9 @@
       "body": [
         "Northern Finncattle, known in Finnish as Lapin Lehmä, have long been part of the livelihoods of Finnish Lapland. After the breed was reduced almost to extinction, conservation efforts helped restore its population.",
         "This case combines anthropology and genetics to investigate relationships between local accounts of resilience, cultural understandings of sustainability and the biological characteristics of the breed.",
-        "The Luke animal genomics team studies whole genomes, gene expression and regulatory mechanisms associated with environmental adaptation. Its wider comparative work includes other northern cattle breeds, reindeer and horses, connecting local conservation questions to research across northern environments."
+        "The Luke animal genomics team studies whole genomes, gene expression and regulatory mechanisms associated with environmental adaptation. Its wider comparative work includes other northern cattle breeds, reindeer and horses, connecting local conservation questions to research across northern environments.",
+        "The September 2026 Luke update reports that Northern Finncattle narrowly escaped extinction in the 1980s and records approximately 850 breeding cows. The principal conservation herd is maintained at the educational farm of Vocational College Lappia in Tervola, Finnish Lapland. Embryos and bull semen are also stored in the national animal genetic resources cryobank.",
+        "The project overview describes farmers exploring production based on milk, meat and other products. It highlights the value placed on the breed’s hardiness, modest feeding requirements, disease resilience and high-fat milk in local farming environments."
       ],
       "methods": "Anthropological fieldwork, whole-genome sequencing, transcriptomics, microRNA profiling and comparative bioinformatics.",
       "image": "finncattle-pasture.webp",
@@ -159,7 +161,8 @@
       "body": [
         "In Ittoqqortoormiit, encounters with hungry polar bears are a concern for local residents. Community members connect these encounters to changing sea ice, bear populations and wildlife management.",
         "Polar bears have long been sources of food and skins in Indigenous communities. Changes in hunting opportunities and environmental conditions raise questions about safety, food security and the future of local hunting practices.",
-        "Working with hunters, families and local wildlife-management practitioners, this case investigates how different understandings of predation and sustainability intersect with climate change, colonial histories and geopolitical interests."
+        "Working with hunters, families and local wildlife-management practitioners, this case investigates how different understandings of predation and sustainability intersect with climate change, colonial histories and geopolitical interests.",
+        "The project overview also records concerns that bears moving onto land may increasingly prey on muskoxen. This connects the polar bear and muskox cases through questions of predation, hunting and food security."
       ],
       "methods": "Collaborative research with hunters, families and wildlife-management practitioners.",
       "source": "main"
@@ -184,9 +187,11 @@
       ],
       "body": [
         "Introduced muskoxen have become part of changing ecological relationships and hunting livelihoods around Kangerlussuaq in West Greenland. SPECIES WP3 asks how they can be managed in a rapidly changing Arctic.",
+        "The project overview places the introduction of muskoxen to Kangerlussuaq in the 1960s. Population growth subsequently contributed to a substantial hunting industry, creating new relationships among hunters, animals and the landscape.",
         "The team is developing an ecological modelling framework that connects individual movement, behaviour and energy use with population trends. It is intended to explore cumulative effects of environmental change and different hunting scenarios.",
         "Model development draws primarily on data from Zackenberg in Northeast Greenland. Anthropological fieldwork and collaboration with hunters and wildlife managers focus on Kangerlussuaq in West Greenland. These are distinct, complementary research settings.",
-        "Through co-creation, the concerns of hunters and other stakeholders will help shape model inputs and hypothetical scenarios. The planned conservation toolkit could support discussions about quotas, habitat monitoring and livelihoods; it remains a research output in development."
+        "Through co-creation, the concerns of hunters and other stakeholders will help shape model inputs and hypothetical scenarios. The planned conservation toolkit could support discussions about quotas, habitat monitoring and livelihoods; it remains a research output in development.",
+        "The WP3 team describes the developing framework as a spatially-explicit DEB-IBM: an individual-based model connecting dynamic energy budgets with animal movement and population change."
       ],
       "methods": "Population monitoring, spatial ecological modelling, anthropological fieldwork and the co-design of management scenarios.",
       "image": "muskox-model.png",
@@ -318,7 +323,7 @@
         "lapland-cattle"
       ],
       "image": "melak-weldenegodguad.webp",
-      "bio": "Melak combines genomics, transcriptomics and bioinformatics to study adaptation and biological diversity in domesticated and wild animals. His interests include multi-omics integration, functional genomics and environmental adaptation.",
+      "bio": "Melak combines genomics, transcriptomics and bioinformatics to study adaptation and biological diversity in domesticated and wild animals. His interests include multi-omics integration, functional genomics and environmental adaptation. His experience includes whole-genome sequencing, RNA-seq, miRNA-seq and ancient DNA datasets, with work on cattle, reindeer, horses, sheep and chickens across northern Eurasia.",
       "source": "luke"
     },
     {
@@ -330,7 +335,7 @@
         "lapland-cattle"
       ],
       "image": "jonne-pohjankukka.webp",
-      "bio": "Jonne coordinates artificial intelligence method services at Luke. His experience includes computer vision, sensor fusion, remotely sensed data and automated systems for environmental observation.",
+      "bio": "Jonne coordinates artificial intelligence method services at Luke. His experience includes computer vision, sensor fusion, remotely sensed data and automated systems for environmental observation. He graduated from the University of Turku in 2018 with a focus on data science and machine learning. The Luke update names Rolls-Royce ship intelligence and Luke Naturewatch among examples of his work.",
       "source": "luke"
     },
     {
@@ -469,6 +474,14 @@
           "Participation as a research method",
           "The team joined fishing and processing activities, learning through practical participation as well as conversation. Preparing and sharing food also revealed seasonal traditions, including a midsummer meal of salmon heads.",
           "These encounters show why the project works across species and practices: fishing, hunting, technology, food and knowledge transmission cannot be understood in isolation from one another."
+        ],
+        [
+          "Making space for people, fish and seals",
+          "The fieldwork account describes traps designed to prevent seals becoming entangled in the mesh. Hosts explain acoustic deterrents as a way of negotiating fishing space: particular traps are places where people catch salmon while seals can feed elsewhere. The account also records concerns about the devices’ effects on seals."
+        ],
+        [
+          "Learning through making",
+          "Researchers joined the cleaning, salting and freezing of salmon roe. Florian relates this practical participation to a making approach, citing Ingold (2013) in the source account. Working together opened conversations that went beyond formal interviews."
         ]
       ],
       "source": "florian"
@@ -499,6 +512,19 @@
         [
           "Relationships beyond an economic measure",
           "The researchers describe sealing as emotionally and culturally significant to their hosts. Through participation, the team asks how management and public debate can recognise these relationships, alongside ecological concerns."
+        ],
+        [
+          "An ice-hunting material culture",
+          "The account identifies the Baltic ringed seal as the focus of the traditional hunt and describes ajopuu, a specially designed monoski used on the ice. The team’s trip around 30 April and 1 May lasted about 14 hours. Hunters’ knowledge concerned finding seals as well as approaching a position from which a hunted animal could be recovered."
+        ],
+        [
+          "Seasons, identity and recognition",
+          "Hosts describe a hunting season that historically began earlier, and the difficulty of fitting a later ice hunt around preparations for fishing as ice conditions change. The report emphasises the cultural and emotional significance of the practice alongside its costs.",
+          "Florian reports that Heidi Konttinen and the seal hunters association attempted to have the sealing culture included in Finland’s intangible cultural heritage list, and that the application was refused. This is presented as the fieldwork team’s account of its experience."
+        ],
+        [
+          "Materials across borders",
+          "The fieldwork account also compares local sealing practices with the circulation of skins from Greenland and describes seal fat used in traditional house paint. The complete source account preserves the author’s discussion of trade, regulation and material uses."
         ]
       ],
       "source": "florian"
@@ -557,6 +583,18 @@
           "Conservation and cultural significance",
           "The project overview links genetic research with anthropological questions about how resilience and sustainability are understood in local farming environments. Conservation of native breeds concerns biological diversity as well as livelihoods, histories and cultural value.",
           "The September update reports publications in preparation and future work on multi-omics integration and machine learning. These are ongoing research activities."
+        ],
+        [
+          "Comparing northern breeds",
+          "The Luke update names Yakutian cattle, Eastern Finncattle and Western Finncattle alongside Northern Finncattle. Comparative work across cattle, reindeer and horses investigates mechanisms of adaptation to northern environments."
+        ],
+        [
+          "Research partnerships and work in progress",
+          "The team reports participation in the newly established Global Consortium for the Conservation of Bovine Genetic Resources. Publications in preparation concern whole-genome sequencing and microRNA regulation of gene expression in cattle metacarpal adipose tissues. Multi-omics integration and machine learning are identified as directions for future analyses."
+        ],
+        [
+          "Conservation in practice",
+          "The September 2026 contribution records approximately 850 Northern Finncattle breeding cows, a principal conservation herd at Vocational College Lappia in Tervola, and embryos and semen held in the national animal genetic resources cryobank."
         ]
       ],
       "source": "luke"
@@ -599,27 +637,27 @@
   "sources": {
     "main": {
       "title": "SPECIES Website Main Content",
-      "url": "https://docs.google.com/document/d/1Om3zUqRkrsxlwTJbpANQggBx7gRJ66hZ/edit"
+      "url": "./source-main.html"
     },
     "florian": {
       "title": "Finland fieldwork update · September 2026",
-      "url": "https://docs.google.com/document/d/1G8KmD5L9oyJVKoaWdYUqAlma00_3R8RL/edit"
+      "url": "./source-florian.html"
     },
     "luke": {
       "title": "Luke website update · September 2026",
-      "url": "./assets/species/luke-research-update.pdf"
+      "url": "./source-luke.html"
     },
     "wp3": {
       "title": "SPECIES WP3 research overview",
-      "url": "https://docs.google.com/document/d/1AvBaNC2l7R4oWGuRP61jTrS5i55SUX_7/edit"
+      "url": "./source-wp3.html"
     },
     "wp3profiles": {
       "title": "SPECIES WP3 profiles",
-      "url": "https://drive.google.com/file/d/1f3shr4tSJWoDranq8eIsIftezQwEaAGN/view"
+      "url": "./source-profiles.html"
     },
     "wp3update": {
       "title": "SPECIES WP3 project update",
-      "url": "https://drive.google.com/file/d/1f3shr4tSJWoDranq8eIsIftezQwEaAGN/view"
+      "url": "./source-update.html"
     }
   }
 }

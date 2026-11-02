@@ -4,7 +4,9 @@ A static research website using the project's supplied Drive materials. It inclu
 
 ## Content maintenance
 
-Edit `data/species.json`, then run `python build-species.py` and `python check-species.py`. The latter checks local links, fragments, image alternative text and remaining placeholders across the 19 pages. The homepage's existing layout is retained by the generator.
+Edit `data/species.json`, then run `python build-species.py` and `python check-species.py`. The latter checks local links, fragments, image alternative text and remaining placeholders across the 27 pages. The homepage's existing layout is retained by the generator.
+
+The complete supplied Drive collection is available at `dist/resources.html`, with seven full-text source pages, original document downloads and all thirteen supplied photographs/diagrams. The build also regenerates the local file-to-page record in `DRIVE-CONTENT-RECORD.md`; see that file for provenance, image credits, checksums and maintenance instructions.
 
 Use the bundled Python runtime with Pillow and pypdf to run `prepare-species-assets.py` when regenerating web images from the supplied originals. Credits are stored alongside the editorial content.
 

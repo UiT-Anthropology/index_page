@@ -1,0 +1,421 @@
+{
+  "date": "2026-11-02",
+  "root_url": "https://drive.google.com/drive/folders/1cs_RIrYgbEW6Op_M-F44fQF9WWnDtU6Z",
+  "entries": [
+    {
+      "key": "main",
+      "title": "SPECIES Website Main Content.docx",
+      "folder": "SPECIES",
+      "file": "assets/drive/main-content.docx",
+      "kind": "document",
+      "uses": [
+        "index.html",
+        "about.html",
+        "cases.html",
+        "team.html",
+        "case-reindeer.html",
+        "case-king-crabs.html",
+        "case-wild-ducks.html",
+        "case-seals.html",
+        "case-lapland-cattle.html",
+        "case-polar-bears.html",
+        "case-muskoxen.html"
+      ],
+      "bytes": 25253,
+      "sha256": "8ef8e6b306ca668990dfe294e8de5ce60f23d20d9ec2abef4a3339f359635cf1",
+      "drive_id": "1Om3zUqRkrsxlwTJbpANQggBx7gRJ66hZ",
+      "drive_url": "https://docs.google.com/document/d/1Om3zUqRkrsxlwTJbpANQggBx7gRJ66hZ/edit?usp=drivesdk&ouid=103877002586930461082&rtpof=true&sd=true",
+      "modified": "2026-10-21T08:34:03.000Z",
+      "page": "source-main.html",
+      "text": "drive-text/main.json",
+      "description": "Project identity, vision, research questions, methods, case studies, work packages and collaborators."
+    },
+    {
+      "key": "test",
+      "title": "test",
+      "folder": "SPECIES",
+      "file": "assets/drive/test.txt",
+      "kind": "document",
+      "uses": [
+        "resources.html"
+      ],
+      "bytes": 6,
+      "sha256": "9af7c56ca1d0c7c991714f25a686aa7f42794926ddd3b1af3fbc4b37a5a1abae",
+      "drive_id": "16VWSxvU1IKMYzcxI2hnPPQQ49UpGHd8C-PKTkLnsAAI",
+      "drive_url": "https://docs.google.com/document/d/16VWSxvU1IKMYzcxI2hnPPQQ49UpGHd8C-PKTkLnsAAI/edit?usp=drivesdk",
+      "modified": "2026-10-04T17:28:07.834Z",
+      "page": "source-test.html",
+      "text": "drive-text/test.json",
+      "description": "A short test document containing Hey."
+    },
+    {
+      "key": "wp3",
+      "title": "SPECIES_WP3_May_2026_aoa_fvb_aoa.docx",
+      "folder": "SPECIES/Website/Muskoxen",
+      "file": "assets/drive/wp3-overview.docx",
+      "kind": "document",
+      "uses": [
+        "case-muskoxen.html",
+        "team.html"
+      ],
+      "bytes": 15849,
+      "sha256": "092dd01f3bb12d3dfd18e53b520679f630db3678673bac1960944e0eabb3f4cf",
+      "drive_id": "1AvBaNC2l7R4oWGuRP61jTrS5i55SUX_7",
+      "drive_url": "https://docs.google.com/document/d/1AvBaNC2l7R4oWGuRP61jTrS5i55SUX_7/edit?usp=drivesdk&ouid=103877002586930461082&rtpof=true&sd=true",
+      "modified": "2026-10-01T09:13:06.061Z",
+      "page": "source-wp3.html",
+      "text": "drive-text/wp3.json",
+      "description": "Ecological modelling, co-creation, Greenland field settings and WP3 collaborators."
+    },
+    {
+      "key": "wp3zip",
+      "title": "SPECIES WP 3 information for website.zip",
+      "folder": "SPECIES/Website/Muskoxen",
+      "file": "assets/drive/wp3-materials.zip",
+      "kind": "archive",
+      "uses": [
+        "resources.html",
+        "team.html",
+        "note-muskox-model.html",
+        "multimedia.html"
+      ],
+      "bytes": 1859338,
+      "sha256": "92b1b646d41f0d43f2371b08262db1424881b286ac3235252208c6f70504237e",
+      "drive_id": "1f3shr4tSJWoDranq8eIsIftezQwEaAGN",
+      "drive_url": "https://drive.google.com/file/d/1f3shr4tSJWoDranq8eIsIftezQwEaAGN/view?usp=drivesdk",
+      "modified": "2026-10-01T09:37:04.699Z",
+      "description": "Two researcher profiles, a Winnipeg research update, two portraits and a working model diagram."
+    },
+    {
+      "key": "florian",
+      "title": "website_update_2026Sep_Florian.docx",
+      "folder": "SPECIES/Website/Seals",
+      "file": "assets/drive/finland-fieldwork.docx",
+      "kind": "document",
+      "uses": [
+        "case-seals.html",
+        "note-ajos.html",
+        "note-seal-practices.html",
+        "team.html"
+      ],
+      "bytes": 34499,
+      "sha256": "2d1bfc595329ad210257d8b64e84a1820402d04f97421fc784f23d5de9543f04",
+      "drive_id": "1G8KmD5L9oyJVKoaWdYUqAlma00_3R8RL",
+      "drive_url": "https://docs.google.com/document/d/1G8KmD5L9oyJVKoaWdYUqAlma00_3R8RL/edit?usp=drivesdk&ouid=103877002586930461082&rtpof=true&sd=true",
+      "modified": "2026-10-01T09:12:13.743Z",
+      "page": "source-florian.html",
+      "text": "drive-text/florian.json",
+      "description": "Spring–summer 2026 fieldwork in Ajos: fishing, seals, hunting, material practices and cultural knowledge."
+    },
+    {
+      "key": "luke",
+      "title": "website_update_LUKE_202609.pdf",
+      "folder": "SPECIES/Website/Seals",
+      "file": "assets/drive/luke-update.pdf",
+      "kind": "document",
+      "uses": [
+        "case-lapland-cattle.html",
+        "note-genomics.html",
+        "note-bovine-symposium.html",
+        "note-multiomics-workshop.html",
+        "team.html",
+        "multimedia.html"
+      ],
+      "bytes": 960590,
+      "sha256": "da610041aabfde80bf7ec2656cd09237a589d9b0c8c362021e8c11b5c9224b64",
+      "drive_id": "16QZjXwQQk58BObldWfPQ58Sv14c0U7Kt",
+      "drive_url": "https://drive.google.com/file/d/16QZjXwQQk58BObldWfPQ58Sv14c0U7Kt/view?usp=drivesdk",
+      "modified": "2026-10-01T09:12:18.525Z",
+      "page": "source-luke.html",
+      "text": "drive-text/luke.json",
+      "description": "Northern livestock genomics, five team biographies, two activities and cattle conservation photographs."
+    },
+    {
+      "key": "heidi",
+      "title": "Heidi_winter_bigger.jpeg",
+      "folder": "SPECIES/Website/Seals",
+      "file": "assets/drive/heidi-winter.jpeg",
+      "kind": "image",
+      "uses": [
+        "team.html#heidi-konttinen",
+        "index.html",
+        "multimedia.html"
+      ],
+      "bytes": 2123682,
+      "sha256": "54b52fe2000d0381a961351de2356d641cdcb09bd28a5301f93dbd2e38a8a6c2",
+      "drive_id": "1H6m2fbSGEXc6Fp27RopFngwTv2_LoRp8",
+      "drive_url": "https://drive.google.com/file/d/1H6m2fbSGEXc6Fp27RopFngwTv2_LoRp8/view?usp=drivesdk",
+      "modified": "2026-10-02T07:01:58.956Z",
+      "credit": "Supplied with the Finland fieldwork materials; photographer not specified.",
+      "alt": "Portrait of Heidi Konttinen in winter clothing",
+      "description": "Portrait of Heidi Konttinen in winter clothing"
+    },
+    {
+      "key": "skins",
+      "title": "Seal skins.JPG",
+      "folder": "SPECIES/Website/Seals",
+      "file": "assets/drive/seal-skins.JPG",
+      "kind": "image",
+      "uses": [
+        "case-seals.html",
+        "note-seal-practices.html",
+        "multimedia.html"
+      ],
+      "bytes": 6130957,
+      "sha256": "cba1c25826d2f57a1d5193b07eaf2c89513d76320fc9673c9fa5f340bae87590",
+      "drive_id": "1LPEb6Te2Kcw24ex85cl2GIN8vlIKoE1D",
+      "drive_url": "https://drive.google.com/file/d/1LPEb6Te2Kcw24ex85cl2GIN8vlIKoE1D/view?usp=drivesdk",
+      "modified": "2026-10-01T09:12:02.510Z",
+      "credit": "Supplied with the Finland fieldwork materials; photographer and location not specified.",
+      "alt": "Seal skins stacked beside larger animal hides",
+      "description": "Seal skins stacked beside larger animal hides"
+    },
+    {
+      "key": "profiles",
+      "title": "SPECIES WP 3 profiles.docx",
+      "folder": "WP3 ZIP",
+      "file": "assets/drive/wp3-profiles.docx",
+      "kind": "document",
+      "uses": [
+        "team.html"
+      ],
+      "bytes": 16364,
+      "sha256": "e81adc66fd1635315219dd97a9afef34403df002435dda72d14e3cbe2fcd6cdc",
+      "parent": "wp3zip",
+      "page": "source-profiles.html",
+      "member": "SPECIES WP 3 profiles.docx",
+      "text": "drive-text/profiles.json",
+      "description": "Research profiles of Benjamin Dupuis and Floris M. van Beest."
+    },
+    {
+      "key": "update",
+      "title": "SPECIES WP 3 project update.docx",
+      "folder": "WP3 ZIP",
+      "file": "assets/drive/wp3-project-update.docx",
+      "kind": "document",
+      "uses": [
+        "note-muskox-model.html"
+      ],
+      "bytes": 248124,
+      "sha256": "1fb0f6cb8f8a688aac430c7eb68e83f818b0eb0e42d86de85111ced10c5be0df",
+      "parent": "wp3zip",
+      "page": "source-update.html",
+      "member": "SPECIES WP 3 project update.docx",
+      "text": "drive-text/update.json",
+      "description": "A research visit to Winnipeg and development of muskox movement and energy-budget modelling."
+    },
+    {
+      "key": "diagram",
+      "title": "conceptual_diagram.png",
+      "folder": "WP3 ZIP",
+      "file": "assets/drive/conceptual-diagram.png",
+      "kind": "image",
+      "uses": [
+        "case-muskoxen.html",
+        "note-muskox-model.html",
+        "multimedia.html"
+      ],
+      "bytes": 264192,
+      "sha256": "09086a7c56875ec6e7fb8b69b55df420f3bae90bc9cc0a517ff1a06e26a263a7",
+      "parent": "wp3zip",
+      "member": "conceptual_diagram.png",
+      "credit": "Supplied by the SPECIES WP3 team.",
+      "alt": "Working diagram linking muskox foraging, movement, energy and reproduction",
+      "description": "Working diagram linking muskox foraging, movement, energy and reproduction"
+    },
+    {
+      "key": "benjamin",
+      "title": "Benjamin Dupuis.jpg",
+      "folder": "WP3 ZIP",
+      "file": "assets/drive/benjamin-dupuis.jpg",
+      "kind": "image",
+      "uses": [
+        "team.html#benjamin-dupuis",
+        "index.html",
+        "multimedia.html"
+      ],
+      "bytes": 766213,
+      "sha256": "b0588bd9dea14e20c038ec78a8deb9886a22257f097967ef97051d5fdaace26f",
+      "parent": "wp3zip",
+      "member": "Benjamin Dupuis.jpg",
+      "credit": "Supplied by the SPECIES WP3 team.",
+      "alt": "Portrait of Benjamin Dupuis",
+      "description": "Portrait of Benjamin Dupuis"
+    },
+    {
+      "key": "floris",
+      "title": "Profile picture Floris.jpg",
+      "folder": "WP3 ZIP",
+      "file": "assets/drive/floris-van-beest.jpg",
+      "kind": "image",
+      "uses": [
+        "team.html#floris-van-beest",
+        "index.html",
+        "multimedia.html"
+      ],
+      "bytes": 594961,
+      "sha256": "22c27b6e98bd586326d988ab5680726b431699445c68cb7ba4b4ba5f995d257c",
+      "parent": "wp3zip",
+      "member": "Profile picture Floris.jpg",
+      "credit": "Supplied by the SPECIES WP3 team.",
+      "alt": "Portrait of Floris M. van Beest",
+      "description": "Portrait of Floris M. van Beest"
+    },
+    {
+      "key": "juha-kantanen",
+      "title": "Portrait of Juha Kantanen",
+      "folder": "Luke PDF / page 2",
+      "file": "assets/drive/juha-kantanen.jpg",
+      "kind": "image",
+      "uses": [
+        "team.html#juha-kantanen",
+        "index.html",
+        "multimedia.html"
+      ],
+      "bytes": 30191,
+      "sha256": "4e02646c004a6a644c9b2d0b3a5a2d7684c2c27ac86d36a8a9b929adf09bbdaa",
+      "parent": "luke",
+      "credit": "Luke team portrait; photographer not specified.",
+      "alt": "Portrait of Juha Kantanen",
+      "pdf_page": 2,
+      "member": "Image30.jpg",
+      "description": "Portrait of Juha Kantanen"
+    },
+    {
+      "key": "kisun-pokharel",
+      "title": "Portrait of Kisun Pokharel",
+      "folder": "Luke PDF / page 2",
+      "file": "assets/drive/kisun-pokharel.jpg",
+      "kind": "image",
+      "uses": [
+        "team.html#kisun-pokharel",
+        "multimedia.html"
+      ],
+      "bytes": 18805,
+      "sha256": "5ead29ff347bc4fe90db849c644710ea9d3694b96f3474393c8608dbd2d3da0f",
+      "parent": "luke",
+      "credit": "Luke team portrait; photographer not specified.",
+      "alt": "Portrait of Kisun Pokharel",
+      "pdf_page": 2,
+      "member": "Image31.jpg",
+      "description": "Portrait of Kisun Pokharel"
+    },
+    {
+      "key": "rodney-okwasiimire",
+      "title": "Portrait of Rodney Okwasiimire",
+      "folder": "Luke PDF / page 3",
+      "file": "assets/drive/rodney-okwasiimire.jpg",
+      "kind": "image",
+      "uses": [
+        "team.html#rodney-okwasiimire",
+        "multimedia.html"
+      ],
+      "bytes": 9952,
+      "sha256": "bb2b5045af3ebd1f7939d4ca32bdff11e16bccdf8309f1a60ad994ed707d19b5",
+      "parent": "luke",
+      "credit": "Luke team portrait; photographer not specified.",
+      "alt": "Portrait of Rodney Okwasiimire",
+      "pdf_page": 3,
+      "member": "Image34.jpg",
+      "description": "Portrait of Rodney Okwasiimire"
+    },
+    {
+      "key": "melak-weldenegodguad",
+      "title": "Portrait of Melak Weldenegodguad",
+      "folder": "Luke PDF / page 3",
+      "file": "assets/drive/melak-weldenegodguad.jpg",
+      "kind": "image",
+      "uses": [
+        "team.html#melak-weldenegodguad",
+        "multimedia.html"
+      ],
+      "bytes": 35210,
+      "sha256": "42c606c50e988bee778b16e9a8c9956d4450524363589fccec2a8003f04883de",
+      "parent": "luke",
+      "credit": "Luke team portrait; photographer not specified.",
+      "alt": "Portrait of Melak Weldenegodguad",
+      "pdf_page": 3,
+      "member": "Image35.jpg",
+      "description": "Portrait of Melak Weldenegodguad"
+    },
+    {
+      "key": "jonne-pohjankukka",
+      "title": "Portrait of Jonne Pohjankukka",
+      "folder": "Luke PDF / page 4",
+      "file": "assets/drive/jonne-pohjankukka.jp2",
+      "kind": "image",
+      "uses": [
+        "team.html#jonne-pohjankukka",
+        "multimedia.html"
+      ],
+      "bytes": 28960,
+      "sha256": "88134459a09617dbe5d07f106636665e1c3ec688a9c48a654ce58a7840c96426",
+      "parent": "luke",
+      "credit": "Luke team portrait; photographer not specified.",
+      "alt": "Portrait of Jonne Pohjankukka",
+      "pdf_page": 4,
+      "member": "Image43.jp2",
+      "description": "Portrait of Jonne Pohjankukka"
+    },
+    {
+      "key": "finncattle-pasture",
+      "title": "Northern Finncattle grazing in pasture",
+      "folder": "Luke PDF / page 5",
+      "file": "assets/drive/finncattle-pasture.jpg",
+      "kind": "image",
+      "uses": [
+        "case-lapland-cattle.html",
+        "multimedia.html"
+      ],
+      "bytes": 233990,
+      "sha256": "c99af302170b145d03900ea256d59186656b74ec7d7f118468d6320a8165a92e",
+      "parent": "luke",
+      "credit": "Photo: Annu Puurunen.",
+      "alt": "Northern Finncattle grazing in pasture",
+      "pdf_page": 5,
+      "member": "Image47.jpg",
+      "description": "Northern Finncattle grazing in pasture"
+    },
+    {
+      "key": "finncattle-woodland",
+      "title": "Northern Finncattle in a wooded landscape",
+      "folder": "Luke PDF / page 6",
+      "file": "assets/drive/finncattle-woodland.jpg",
+      "kind": "image",
+      "uses": [
+        "note-genomics.html",
+        "multimedia.html"
+      ],
+      "bytes": 327380,
+      "sha256": "80829697c996beb2fe0b9b36eb3e0009a329e2b98adf817f665be1f8b820ae3b",
+      "parent": "luke",
+      "credit": "Photo: Juha Kantanen.",
+      "alt": "Northern Finncattle in a wooded landscape",
+      "pdf_page": 6,
+      "member": "Image50.jpg",
+      "description": "Northern Finncattle in a wooded landscape"
+    },
+    {
+      "key": "finncattle-archive",
+      "title": "Northern Finncattle in an archive photograph",
+      "folder": "Luke PDF / page 6",
+      "file": "assets/drive/finncattle-archive.jpg",
+      "kind": "image",
+      "uses": [
+        "multimedia.html"
+      ],
+      "bytes": 218322,
+      "sha256": "cf6a4bdfafb50038b566bf62ef731cf56e9085da2caf2c5f896c3975a8465465",
+      "parent": "luke",
+      "credit": "Photo: Luke Archive.",
+      "alt": "Northern Finncattle in an archive photograph",
+      "pdf_page": 6,
+      "member": "Image51.jpg",
+      "description": "Northern Finncattle in an archive photograph"
+    }
+  ],
+  "empty_folders": [
+    "SPECIES/Website/Reindeer",
+    "SPECIES/Website/King Crab"
+  ]
+}

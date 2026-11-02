@@ -32,7 +32,7 @@ def header(active=''):
       <a class="brand-placeholder header-brand" href="./index.html" aria-label="SPECIES home"><span class="brand-placeholder-mark" aria-hidden="true">S</span><span>SPECIES</span></a>
       <nav class="header-links" aria-label="Main navigation">{''.join(link(*l) for l in links)}</nav>
       <button class="header-menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="header-menu"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
-      <nav class="header-menu" id="header-menu" aria-label="All navigation" hidden><span class="header-menu-title">Explore</span>{link('index.html','Home')}{link('about.html','About the project')}{''.join(link(*l) for l in links)}<a href="./index.html#partners">Research institutions</a></nav>
+      <nav class="header-menu" id="header-menu" aria-label="All navigation" hidden><span class="header-menu-title">Explore</span>{link('index.html','Home')}{link('about.html','About the project')}{''.join(link(*l) for l in links)}{link('resources.html','Research materials')}<a href="./index.html#partners">Research institutions</a></nav>
     </header>'''
 
 def footer():
@@ -44,7 +44,7 @@ def page(title, description, body, active=''):
 <meta name="theme-color" content="#071724"/><meta name="description" content="{e(description)}"/>
 <title>{e(title)} · SPECIES</title>
 <link rel="stylesheet" href="./styles.css"/><link rel="stylesheet" href="./story.css"/><link rel="stylesheet" href="./team-page.css"/><link rel="stylesheet" href="./header.css"/><link rel="stylesheet" href="./species.css"/>
-<script src="./header.js" defer></script><script src="./species.js" defer></script></head>
+<link rel="stylesheet" href="./library.css"/><script src="./header.js" defer></script><script src="./species.js" defer></script></head>
 <body><a class="skip-link" href="#main">Skip to main content</a><div class="site-shell species-shell" id="top">{header(active)}<main id="main">{body}</main>{footer()}</div></body></html>'''
 
 def intro(kicker, title, description):
@@ -136,9 +136,14 @@ def build_media():
       ('lapland-cattle','finncattle-archive.webp','Northern Finncattle archive','A white Northern Finncattle cow in a wooded pasture','Photo: Luke Archive.'),
       ('muskoxen','muskox-model.png','Inside a developing model','Working diagram of muskox foraging, energy budgets, movement and reproduction','SPECIES WP3 working conceptual diagram; model development, not simulation results.'),
       ('seals','seal-skins.webp','Skins and material practices','Stacks of seal skins beside larger hides in a workshop','Supplied with the Finland fieldwork materials. Photographer and location not specified.')]
-    body = '<h1 class="sr-only">Multimedia</h1><section class="editorial-section directory-section" data-filter-group aria-label="Media collection">' + filters([('all','All media'),('lapland-cattle','Lapland cattle'),('muskoxen','Muskoxen'),('seals','Seals')],'Filter media by case') + '<div class="media-grid">'
+    for person in DATA['people']:
+        if person.get('image'):
+            media.append(('portraits', person['image'], person['name'], 'Portrait of ' + person['name'], 'Supplied in the SPECIES research materials.'))
+    body = '<h1 class="sr-only">Multimedia</h1><section class="editorial-section directory-section" data-filter-group aria-label="Media collection"><p><a class="text-link" href="./resources.html">Source documents and original image downloads ↗</a></p>' + filters([('all','All media'),('lapland-cattle','Lapland cattle'),('muskoxen','Muskoxen'),('seals','Seals'),('portraits','Team portraits')],'Filter media by case') + '<div class="media-grid">'
     for cid,filename,title,alt,credit in media:
-        body += f'<article class="media-tile" data-filter-item data-region="{cid}">{photo(filename,alt,credit,"diagram" if cid=="muskoxen" else "")}<h2>{e(title)}</h2><a class="text-link" href="./case-{cid}.html">{e(CASES[cid]["name"])} case →</a></article>'
+        destination = 'team.html' if cid == 'portraits' else 'case-' + cid + '.html'
+        label = 'Meet the team' if cid == 'portraits' else CASES[cid]['name'] + ' case'
+        body += f'<article class="media-tile" data-filter-item data-region="{cid}">{photo(filename,alt,credit,"diagram" if cid=="muskoxen" else "")}<h2>{e(title)}</h2><a class="text-link" href="./{destination}">{e(label)} →</a></article>'
     body += '</div></section><section class="editorial-section download-panel"><div><span class="team-page-kicker">FURTHER READING</span><h2>The Luke research update.</h2><p>Read the complete September 2026 contribution, including research descriptions, team biographies, activities and photographs.</p></div><a class="outline-link" href="./assets/species/luke-research-update.pdf" download>Download PDF · 938 KB ↓</a></section>'
     write('multimedia.html',page('Multimedia','Photography and research diagrams from SPECIES.',body,'multimedia.html'))
 
@@ -152,7 +157,8 @@ def build_about():
     <p>Collaborative fieldwork and participatory workshops create opportunities to exchange knowledge, identify shared goals and connect research with local priorities. Local and Indigenous partners participate in framing questions as well as developing knowledge.</p>
     <h2>Questions guiding the research</h2><ul class="research-questions"><li>How can environmental conflicts be co-researched through different multispecies ontologies?</li><li>How can local and Indigenous knowledge work alongside research to question approaches to development, management and conservation?</li><li>How can participatory fieldwork and Indigenous methodologies challenge reductive understandings of traditional knowledge?</li><li>How can co-producing knowledge advance sustainable multispecies relations?</li></ul>
     <h2>Towards sustainable multispecies futures</h2><p>The project seeks to strengthen collaboration, identify shared priorities and explore culturally sensitive approaches to environmental management. Its ambition is to build alliances that recognise local aspirations, Indigenous sovereignty and the value of different knowledge traditions.</p>'''
-    body += source_note('main') + '</article><section class="related-links"><a href="./cases.html">Explore the seven cases ↗</a><a href="./team.html">Meet the contributors ↗</a></section>'
+    body += '''<h2>Three regional work packages</h2><dl class="work-packages"><dt>WP1 — Sápmi, Norway</dt><dd>Reindeer herding and technology; king crab fisheries and international markets.</dd><dt>WP2 — Finland</dt><dd>Baltic sealing traditions and marine relations; Lapland cattle, genetic heritage and agriculture.</dd><dt>WP3 — Greenland</dt><dd>Polar bears, predation and food security; muskoxen, changing ecologies and coexistence.</dd></dl><p>Wild ducks and Sámi artistic collaboration are also part of the seven-species project overview. The supplied work-package list does not separately assign that case.</p><h2>Partners shaping the research</h2><p>Workshops led by local and Indigenous partners provide opportunities to frame questions, exchange knowledge and identify shared goals. The project asks how research can respect the worldviews and practices through which knowledge is formed, and address inequalities between communities, researchers, industry and the state.</p>'''
+    body += source_note('main') + '</article><section class="related-links"><a href="./cases.html">Explore the seven cases ↗</a><a href="./team.html">Meet the contributors ↗</a><a href="./resources.html">Read the source materials ↗</a></section>'
     write('about.html',page('About the project','The vision, questions and collaborative approach behind SPECIES.',body))
 
 def build_home():
@@ -200,4 +206,6 @@ if __name__ == '__main__':
     build_media()
     build_about()
     build_home()
+    import runpy
+    runpy.run_path(str(ROOT / 'build-drive-library.py'), run_name='__main__')
     print(f'Built homepage, 7 cases, {len(PEOPLE)} contributor profiles, {len(STORIES)} notes, about and media pages.')
